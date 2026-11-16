@@ -238,6 +238,8 @@ MNIST 测试准确率描述的是模型对这份测试集的表现，不能直�
 
 维护代码后，可运行 `.venv/bin/python -m unittest discover -s tests -v` 检查图片预处理、模型保存和本地接口。这些测试使用临时随机权重，不需要重新训练或联网。
 
+网页版的预处理回归测试运行 `node --test tests/test_preprocess.mjs`。测试使用合成像素，覆盖空白图、黑白极性、透明背景、比例与居中、舍入边界以及 softmax 数值稳定性。
+
 先读 `model.py` 看网络结构，再读 `train.py` 找到上面五行训练代码，最后读 `predict.py` 看图片如何变成模型输入。`app.py` 把识别功能接到本地网页，`web/index.html` 提供画板和结果展示。
 
 需要查原始说明时，可以阅读 [PyTorch 入门教程](https://docs.pytorch.org/tutorials/beginner/basics/quickstart_tutorial.html)、[Apple 芯片上的 MPS 后端说明](https://docs.pytorch.org/docs/stable/notes/mps.html)和 [torchvision 的 MNIST 数据集文档](https://docs.pytorch.org/vision/stable/generated/torchvision.datasets.MNIST.html)。
