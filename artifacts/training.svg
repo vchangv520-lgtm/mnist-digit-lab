@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="340" viewBox="0 0 900 340">
+<rect width="900" height="340" fill="#f8fafc"/>
+<style>text{font-family:system-ui,sans-serif;font-size:12px;fill:#334155}</style>
+<text x="60" y="28" font-weight="bold">Loss (lower is better)</text>
+<path d="M 60 55.0 h 355" stroke="#e2e8f0"/>
+<text x="52" y="59.0" text-anchor="end">0.29</text>
+<path d="M 60 107.5 h 355" stroke="#e2e8f0"/>
+<text x="52" y="111.5" text-anchor="end">0.21</text>
+<path d="M 60 160.0 h 355" stroke="#e2e8f0"/>
+<text x="52" y="164.0" text-anchor="end">0.14</text>
+<path d="M 60 212.5 h 355" stroke="#e2e8f0"/>
+<text x="52" y="216.5" text-anchor="end">0.07</text>
+<path d="M 60 265.0 h 355" stroke="#e2e8f0"/>
+<text x="52" y="269.0" text-anchor="end">0.00</text>
+<circle cx="60.0" cy="82.4" r="4" fill="#2563eb"/>
+<circle cx="237.5" cy="216.9" r="4" fill="#2563eb"/>
+<circle cx="415.0" cy="230.4" r="4" fill="#2563eb"/>
+<polyline points="60.0,82.4 237.5,216.9 415.0,230.4" fill="none" stroke="#2563eb" stroke-width="2"/>
+<text x="60" y="320" style="fill:#2563eb">Train</text>
+<circle cx="60.0" cy="207.8" r="4" fill="#e07a39"/>
+<circle cx="237.5" cy="227.0" r="4" fill="#e07a39"/>
+<circle cx="415.0" cy="228.1" r="4" fill="#e07a39"/>
+<polyline points="60.0,207.8 237.5,227.0 415.0,228.1" fill="none" stroke="#e07a39" stroke-width="2"/>
+<text x="190" y="320" style="fill:#e07a39">Validation</text>
+<text x="60.0" y="290" text-anchor="middle">Epoch 1</text>
+<text x="237.5" y="290" text-anchor="middle">Epoch 2</text>
+<text x="415.0" y="290" text-anchor="middle">Epoch 3</text>
+<text x="510" y="28" font-weight="bold">Accuracy (higher is better)</text>
+<path d="M 510 55.0 h 355" stroke="#e2e8f0"/>
+<text x="502" y="59.0" text-anchor="end">100%</text>
+<path d="M 510 107.5 h 355" stroke="#e2e8f0"/>
+<text x="502" y="111.5" text-anchor="end">75%</text>
+<path d="M 510 160.0 h 355" stroke="#e2e8f0"/>
+<text x="502" y="164.0" text-anchor="end">50%</text>
+<path d="M 510 212.5 h 355" stroke="#e2e8f0"/>
+<text x="502" y="216.5" text-anchor="end">25%</text>
+<path d="M 510 265.0 h 355" stroke="#e2e8f0"/>
+<text x="502" y="269.0" text-anchor="end">0%</text>
+<circle cx="510.0" cy="70.5" r="4" fill="#2563eb"/>
+<circle cx="687.5" cy="59.2" r="4" fill="#2563eb"/>
+<circle cx="865.0" cy="58.0" r="4" fill="#2563eb"/>
+<polyline points="510.0,70.5 687.5,59.2 865.0,58.0" fill="none" stroke="#2563eb" stroke-width="2"/>
+<text x="510" y="320" style="fill:#2563eb">Train</text>
+<circle cx="510.0" cy="59.7" r="4" fill="#e07a39"/>
+<circle cx="687.5" cy="58.2" r="4" fill="#e07a39"/>
+<circle cx="865.0" cy="57.7" r="4" fill="#e07a39"/>
+<polyline points="510.0,59.7 687.5,58.2 865.0,57.7" fill="none" stroke="#e07a39" stroke-width="2"/>
+<text x="640" y="320" style="fill:#e07a39">Validation</text>
+<text x="510.0" y="290" text-anchor="middle">Epoch 1</text>
+<text x="687.5" y="290" text-anchor="middle">Epoch 2</text>
+<text x="865.0" y="290" text-anchor="middle">Epoch 3</text>
+</svg>

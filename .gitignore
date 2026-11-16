@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+.DS_Store
+data/
+*.pt
+!mnist_linear_weights.pt
+artifacts/*
+!artifacts/mnist_cnn.pt
+!artifacts/metrics.json
+!artifacts/training.svg
+!artifacts/samples.png
+*.log
+.env
+.env.*
+node_modules/
+*.tgz

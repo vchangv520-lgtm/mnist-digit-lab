@@ -1,0 +1,6 @@
+# 在 Apple M3 / Python 3.12 上安装并验证的版本。
+torch==2.15.0
+torchvision==0.29.2
+numpy==2.5.5
+pillow==13.0.0
+certifi==2026.10.23

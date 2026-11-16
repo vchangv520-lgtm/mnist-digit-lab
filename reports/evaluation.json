@@ -1,0 +1,4280 @@
+{
+  "evaluated_at_utc": "2026-11-16T15:36:59.205393+00:00",
+  "dataset": "MNIST official test split",
+  "checkpoint_filename": "mnist_cnn.pt",
+  "checkpoint_sha256": "6b668995064b93281563d2babd18eceb7f99a4feec9e543224d095dbcd5cc6d1",
+  "checkpoint_epoch": 3,
+  "device": "cpu",
+  "torch_version": "2.15.0",
+  "retrained": false,
+  "new_holdout": false,
+  "normalization": {
+    "mean": 0.1307,
+    "std": 0.3081
+  },
+  "methodology": "Re-evaluation of the previously reported 10,000-image test split; no test-driven tuning. Python app preprocessing results do not measure real-user handwriting or browser preprocessing.",
+  "standard_mnist": {
+    "total": 10000,
+    "correct": 9858,
+    "incorrect": 142,
+    "accuracy": 0.9858,
+    "accuracy_wilson_95_ci": [
+      0.9832874813228473,
+      0.9879394258602033
+    ],
+    "accepted_count": 10000,
+    "rejected_count": 0,
+    "per_class": [
+      {
+        "digit": 0,
+        "precision": 0.9828456104944501,
+        "recall": 0.9938775510204082,
+        "f1": 0.9883307965499747,
+        "support": 980,
+        "correct": 974,
+        "rejected": 0
+      },
+      {
+        "digit": 1,
+        "precision": 0.9955985915492958,
+        "recall": 0.9964757709251101,
+        "f1": 0.9960369881109644,
+        "support": 1135,
+        "correct": 1131,
+        "rejected": 0
+      },
+      {
+        "digit": 2,
+        "precision": 0.9883154819863681,
+        "recall": 0.9835271317829457,
+        "f1": 0.9859154929577466,
+        "support": 1032,
+        "correct": 1015,
+        "rejected": 0
+      },
+      {
+        "digit": 3,
+        "precision": 0.9766309639727361,
+        "recall": 0.9930693069306931,
+        "f1": 0.9847815414825724,
+        "support": 1010,
+        "correct": 1003,
+        "rejected": 0
+      },
+      {
+        "digit": 4,
+        "precision": 0.9928425357873211,
+        "recall": 0.9887983706720977,
+        "f1": 0.9908163265306124,
+        "support": 982,
+        "correct": 971,
+        "rejected": 0
+      },
+      {
+        "digit": 5,
+        "precision": 0.9724669603524229,
+        "recall": 0.9899103139013453,
+        "f1": 0.981111111111111,
+        "support": 892,
+        "correct": 883,
+        "rejected": 0
+      },
+      {
+        "digit": 6,
+        "precision": 0.9895287958115183,
+        "recall": 0.9864300626304802,
+        "f1": 0.9879769994772608,
+        "support": 958,
+        "correct": 945,
+        "rejected": 0
+      },
+      {
+        "digit": 7,
+        "precision": 0.9722753346080306,
+        "recall": 0.9892996108949417,
+        "f1": 0.9807135969141756,
+        "support": 1028,
+        "correct": 1017,
+        "rejected": 0
+      },
+      {
+        "digit": 8,
+        "precision": 0.9936842105263158,
+        "recall": 0.9691991786447639,
+        "f1": 0.9812889812889812,
+        "support": 974,
+        "correct": 944,
+        "rejected": 0
+      },
+      {
+        "digit": 9,
+        "precision": 0.9928716904276986,
+        "recall": 0.9663032705649157,
+        "f1": 0.9794073329984933,
+        "support": 1009,
+        "correct": 975,
+        "rejected": 0
+      }
+    ],
+    "macro_f1": 0.9856379167421891,
+    "weighted_f1": 0.985794606141682,
+    "confusion_matrix": [
+      [
+        974,
+        0,
+        1,
+        0,
+        0,
+        1,
+        3,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1131,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        3,
+        1,
+        1015,
+        5,
+        1,
+        0,
+        0,
+        6,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1003,
+        0,
+        4,
+        0,
+        2,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        971,
+        0,
+        1,
+        5,
+        1,
+        4
+      ],
+      [
+        2,
+        0,
+        0,
+        6,
+        0,
+        883,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        5,
+        2,
+        0,
+        0,
+        1,
+        5,
+        945,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        6,
+        2,
+        0,
+        0,
+        0,
+        1017,
+        1,
+        0
+      ],
+      [
+        5,
+        0,
+        4,
+        5,
+        1,
+        5,
+        4,
+        3,
+        944,
+        3
+      ],
+      [
+        1,
+        1,
+        0,
+        5,
+        4,
+        9,
+        0,
+        12,
+        2,
+        975
+      ]
+    ],
+    "confusion_matrix_rows": "true label 0..9",
+    "confusion_matrix_columns": "predicted label 0..9; rejected inputs counted separately",
+    "most_frequent_confusions": [
+      {
+        "true_digit": 9,
+        "predicted_digit": 7,
+        "count": 12
+      },
+      {
+        "true_digit": 9,
+        "predicted_digit": 5,
+        "count": 9
+      },
+      {
+        "true_digit": 2,
+        "predicted_digit": 7,
+        "count": 6
+      },
+      {
+        "true_digit": 5,
+        "predicted_digit": 3,
+        "count": 6
+      },
+      {
+        "true_digit": 7,
+        "predicted_digit": 2,
+        "count": 6
+      },
+      {
+        "true_digit": 2,
+        "predicted_digit": 3,
+        "count": 5
+      },
+      {
+        "true_digit": 4,
+        "predicted_digit": 7,
+        "count": 5
+      },
+      {
+        "true_digit": 6,
+        "predicted_digit": 0,
+        "count": 5
+      },
+      {
+        "true_digit": 6,
+        "predicted_digit": 5,
+        "count": 5
+      },
+      {
+        "true_digit": 8,
+        "predicted_digit": 0,
+        "count": 5
+      }
+    ],
+    "mode": "standard_mnist",
+    "cross_entropy_on_accepted_inputs": 0.040195770131237804,
+    "seconds": 0.313,
+    "rejections": [],
+    "errors": [
+      {
+        "test_index": 259,
+        "true_digit": 6,
+        "predicted_digit": 0,
+        "confidence": 0.8353529572486877
+      },
+      {
+        "test_index": 321,
+        "true_digit": 2,
+        "predicted_digit": 7,
+        "confidence": 0.5149136781692505
+      },
+      {
+        "test_index": 445,
+        "true_digit": 6,
+        "predicted_digit": 0,
+        "confidence": 0.7427981495857239
+      },
+      {
+        "test_index": 449,
+        "true_digit": 3,
+        "predicted_digit": 5,
+        "confidence": 0.8167786002159119
+      },
+      {
+        "test_index": 495,
+        "true_digit": 8,
+        "predicted_digit": 6,
+        "confidence": 0.7804021835327148
+      },
+      {
+        "test_index": 582,
+        "true_digit": 8,
+        "predicted_digit": 2,
+        "confidence": 0.9474130272865295
+      },
+      {
+        "test_index": 684,
+        "true_digit": 7,
+        "predicted_digit": 3,
+        "confidence": 0.518700361251831
+      },
+      {
+        "test_index": 717,
+        "true_digit": 0,
+        "predicted_digit": 5,
+        "confidence": 0.48434314131736755
+      },
+      {
+        "test_index": 740,
+        "true_digit": 4,
+        "predicted_digit": 9,
+        "confidence": 0.6297970414161682
+      },
+      {
+        "test_index": 844,
+        "true_digit": 8,
+        "predicted_digit": 7,
+        "confidence": 0.48158058524131775
+      },
+      {
+        "test_index": 882,
+        "true_digit": 9,
+        "predicted_digit": 7,
+        "confidence": 0.9576168656349182
+      },
+      {
+        "test_index": 938,
+        "true_digit": 3,
+        "predicted_digit": 5,
+        "confidence": 0.5167426466941833
+      },
+      {
+        "test_index": 947,
+        "true_digit": 8,
+        "predicted_digit": 9,
+        "confidence": 0.4660365879535675
+      },
+      {
+        "test_index": 1014,
+        "true_digit": 6,
+        "predicted_digit": 5,
+        "confidence": 0.8893550634384155
+      },
+      {
+        "test_index": 1039,
+        "true_digit": 7,
+        "predicted_digit": 2,
+        "confidence": 0.7760925889015198
+      },
+      {
+        "test_index": 1112,
+        "true_digit": 4,
+        "predicted_digit": 6,
+        "confidence": 0.7759116291999817
+      },
+      {
+        "test_index": 1182,
+        "true_digit": 6,
+        "predicted_digit": 5,
+        "confidence": 0.7068822979927063
+      },
+      {
+        "test_index": 1202,
+        "true_digit": 8,
+        "predicted_digit": 6,
+        "confidence": 0.6258479356765747
+      },
+      {
+        "test_index": 1224,
+        "true_digit": 2,
+        "predicted_digit": 4,
+        "confidence": 0.5609004497528076
+      },
+      {
+        "test_index": 1226,
+        "true_digit": 7,
+        "predicted_digit": 2,
+        "confidence": 0.9095667004585266
+      },
+      {
+        "test_index": 1232,
+        "true_digit": 9,
+        "predicted_digit": 4,
+        "confidence": 0.4457513093948364
+      },
+      {
+        "test_index": 1247,
+        "true_digit": 9,
+        "predicted_digit": 5,
+        "confidence": 0.796035885810852
+      },
+      {
+        "test_index": 1299,
+        "true_digit": 5,
+        "predicted_digit": 3,
+        "confidence": 0.3389180898666382
+      },
+      {
+        "test_index": 1319,
+        "true_digit": 8,
+        "predicted_digit": 0,
+        "confidence": 0.831113874912262
+      },
+      {
+        "test_index": 1364,
+        "true_digit": 8,
+        "predicted_digit": 2,
+        "confidence": 0.48821142315864563
+      },
+      {
+        "test_index": 1393,
+        "true_digit": 5,
+        "predicted_digit": 3,
+        "confidence": 0.8667880296707153
+      },
+      {
+        "test_index": 1414,
+        "true_digit": 9,
+        "predicted_digit": 7,
+        "confidence": 0.7162893414497375
+      },
+      {
+        "test_index": 1527,
+        "true_digit": 1,
+        "predicted_digit": 5,
+        "confidence": 0.552747368812561
+      },
+      {
+        "test_index": 1530,
+        "true_digit": 8,
+        "predicted_digit": 7,
+        "confidence": 0.9076154828071594
+      },
+      {
+        "test_index": 1553,
+        "true_digit": 9,
+        "predicted_digit": 3,
+        "confidence": 0.6037503480911255
+      },
+      {
+        "test_index": 1609,
+        "true_digit": 2,
+        "predicted_digit": 3,
+        "confidence": 0.7657917737960815
+      },
+      {
+        "test_index": 1621,
+        "true_digit": 0,
+        "predicted_digit": 6,
+        "confidence": 0.6431518793106079
+      },
+      {
+        "test_index": 1709,
+        "true_digit": 9,
+        "predicted_digit": 5,
+        "confidence": 0.6339342594146729
+      },
+      {
+        "test_index": 1717,
+        "true_digit": 8,
+        "predicted_digit": 0,
+        "confidence": 0.756395697593689
+      },
+      {
+        "test_index": 1722,
+        "true_digit": 2,
+        "predicted_digit": 7,
+        "confidence": 0.6814053058624268
+      },
+      {
+        "test_index": 1754,
+        "true_digit": 7,
+        "predicted_digit": 2,
+        "confidence": 0.6314571499824524
+      },
+      {
+        "test_index": 1878,
+        "true_digit": 8,
+        "predicted_digit": 3,
+        "confidence": 0.9532129168510437
+      },
+      {
+        "test_index": 1901,
+        "true_digit": 9,
+        "predicted_digit": 4,
+        "confidence": 0.9567922353744507
+      },
+      {
+        "test_index": 1955,
+        "true_digit": 8,
+        "predicted_digit": 2,
+        "confidence": 0.6818913817405701
+      },
+      {
+        "test_index": 2035,
+        "true_digit": 5,
+        "predicted_digit": 3,
+        "confidence": 0.8312545418739319
+      },
+      {
+        "test_index": 2053,
+        "true_digit": 4,
+        "predicted_digit": 9,
+        "confidence": 0.6214044094085693
+      },
+      {
+        "test_index": 2098,
+        "true_digit": 2,
+        "predicted_digit": 0,
+        "confidence": 0.7226313948631287
+      },
+      {
+        "test_index": 2109,
+        "true_digit": 3,
+        "predicted_digit": 7,
+        "confidence": 0.7134507298469543
+      },
+      {
+        "test_index": 2118,
+        "true_digit": 6,
+        "predicted_digit": 0,
+        "confidence": 0.922569990158081
+      },
+      {
+        "test_index": 2130,
+        "true_digit": 4,
+        "predicted_digit": 9,
+        "confidence": 0.9315474629402161
+      },
+      {
+        "test_index": 2135,
+        "true_digit": 6,
+        "predicted_digit": 1,
+        "confidence": 0.6440240144729614
+      },
+      {
+        "test_index": 2182,
+        "true_digit": 1,
+        "predicted_digit": 3,
+        "confidence": 0.6804211735725403
+      },
+      {
+        "test_index": 2280,
+        "true_digit": 3,
+        "predicted_digit": 5,
+        "confidence": 0.5053533911705017
+      },
+      {
+        "test_index": 2454,
+        "true_digit": 6,
+        "predicted_digit": 5,
+        "confidence": 0.5051820278167725
+      },
+      {
+        "test_index": 2462,
+        "true_digit": 2,
+        "predicted_digit": 0,
+        "confidence": 0.8994603157043457
+      },
+      {
+        "test_index": 2597,
+        "true_digit": 5,
+        "predicted_digit": 3,
+        "confidence": 0.9644612073898315
+      },
+      {
+        "test_index": 2654,
+        "true_digit": 6,
+        "predicted_digit": 1,
+        "confidence": 0.9984983205795288
+      },
+      {
+        "test_index": 2896,
+        "true_digit": 8,
+        "predicted_digit": 0,
+        "confidence": 0.9991111159324646
+      },
+      {
+        "test_index": 2927,
+        "true_digit": 3,
+        "predicted_digit": 7,
+        "confidence": 0.7894369959831238
+      },
+      {
+        "test_index": 2939,
+        "true_digit": 9,
+        "predicted_digit": 5,
+        "confidence": 0.9011532664299011
+      },
+      {
+        "test_index": 2995,
+        "true_digit": 6,
+        "predicted_digit": 5,
+        "confidence": 0.5057365894317627
+      },
+      {
+        "test_index": 3023,
+        "true_digit": 8,
+        "predicted_digit": 5,
+        "confidence": 0.485800564289093
+      },
+      {
+        "test_index": 3030,
+        "true_digit": 6,
+        "predicted_digit": 0,
+        "confidence": 0.6276722550392151
+      },
+      {
+        "test_index": 3060,
+        "true_digit": 9,
+        "predicted_digit": 7,
+        "confidence": 0.42564305663108826
+      },
+      {
+        "test_index": 3073,
+        "true_digit": 1,
+        "predicted_digit": 2,
+        "confidence": 0.9084050059318542
+      },
+      {
+        "test_index": 3330,
+        "true_digit": 2,
+        "predicted_digit": 3,
+        "confidence": 0.5839003324508667
+      },
+      {
+        "test_index": 3422,
+        "true_digit": 6,
+        "predicted_digit": 0,
+        "confidence": 0.563960075378418
+      },
+      {
+        "test_index": 3503,
+        "true_digit": 9,
+        "predicted_digit": 1,
+        "confidence": 0.44931545853614807
+      },
+      {
+        "test_index": 3520,
+        "true_digit": 6,
+        "predicted_digit": 4,
+        "confidence": 0.9853078722953796
+      },
+      {
+        "test_index": 3558,
+        "true_digit": 5,
+        "predicted_digit": 0,
+        "confidence": 0.6376665234565735
+      },
+      {
+        "test_index": 3559,
+        "true_digit": 8,
+        "predicted_digit": 5,
+        "confidence": 0.6146295666694641
+      },
+      {
+        "test_index": 3597,
+        "true_digit": 9,
+        "predicted_digit": 3,
+        "confidence": 0.3221358060836792
+      },
+      {
+        "test_index": 3618,
+        "true_digit": 9,
+        "predicted_digit": 7,
+        "confidence": 0.5860804915428162
+      },
+      {
+        "test_index": 3626,
+        "true_digit": 8,
+        "predicted_digit": 3,
+        "confidence": 0.45632341504096985
+      },
+      {
+        "test_index": 3726,
+        "true_digit": 4,
+        "predicted_digit": 9,
+        "confidence": 0.5128602981567383
+      },
+      {
+        "test_index": 3727,
+        "true_digit": 8,
+        "predicted_digit": 3,
+        "confidence": 0.6168069839477539
+      },
+      {
+        "test_index": 3767,
+        "true_digit": 7,
+        "predicted_digit": 2,
+        "confidence": 0.8095823526382446
+      },
+      {
+        "test_index": 3808,
+        "true_digit": 7,
+        "predicted_digit": 8,
+        "confidence": 0.8619808554649353
+      },
+      {
+        "test_index": 3811,
+        "true_digit": 2,
+        "predicted_digit": 3,
+        "confidence": 0.3459570109844208
+      },
+      {
+        "test_index": 3856,
+        "true_digit": 9,
+        "predicted_digit": 7,
+        "confidence": 0.5005526542663574
+      },
+      {
+        "test_index": 3869,
+        "true_digit": 9,
+        "predicted_digit": 4,
+        "confidence": 0.503878116607666
+      },
+      {
+        "test_index": 4065,
+        "true_digit": 0,
+        "predicted_digit": 2,
+        "confidence": 0.5494062900543213
+      },
+      {
+        "test_index": 4075,
+        "true_digit": 8,
+        "predicted_digit": 0,
+        "confidence": 0.5112087726593018
+      },
+      {
+        "test_index": 4176,
+        "true_digit": 2,
+        "predicted_digit": 7,
+        "confidence": 0.9915846586227417
+      },
+      {
+        "test_index": 4224,
+        "true_digit": 9,
+        "predicted_digit": 7,
+        "confidence": 0.9218410849571228
+      },
+      {
+        "test_index": 4238,
+        "true_digit": 7,
+        "predicted_digit": 3,
+        "confidence": 0.7046916484832764
+      },
+      {
+        "test_index": 4265,
+        "true_digit": 4,
+        "predicted_digit": 7,
+        "confidence": 0.5488206744194031
+      },
+      {
+        "test_index": 4284,
+        "true_digit": 9,
+        "predicted_digit": 5,
+        "confidence": 0.4380384087562561
+      },
+      {
+        "test_index": 4294,
+        "true_digit": 9,
+        "predicted_digit": 7,
+        "confidence": 0.5812892317771912
+      },
+      {
+        "test_index": 4497,
+        "true_digit": 8,
+        "predicted_digit": 7,
+        "confidence": 0.8538014888763428
+      },
+      {
+        "test_index": 4536,
+        "true_digit": 6,
+        "predicted_digit": 5,
+        "confidence": 0.7269265055656433
+      },
+      {
+        "test_index": 4639,
+        "true_digit": 8,
+        "predicted_digit": 9,
+        "confidence": 0.8125341534614563
+      },
+      {
+        "test_index": 4731,
+        "true_digit": 8,
+        "predicted_digit": 3,
+        "confidence": 0.5254873633384705
+      },
+      {
+        "test_index": 4740,
+        "true_digit": 3,
+        "predicted_digit": 5,
+        "confidence": 0.9484182596206665
+      },
+      {
+        "test_index": 4761,
+        "true_digit": 9,
+        "predicted_digit": 8,
+        "confidence": 0.7906125783920288
+      },
+      {
+        "test_index": 4807,
+        "true_digit": 8,
+        "predicted_digit": 0,
+        "confidence": 0.5295605659484863
+      },
+      {
+        "test_index": 4823,
+        "true_digit": 9,
+        "predicted_digit": 4,
+        "confidence": 0.5537728667259216
+      },
+      {
+        "test_index": 4879,
+        "true_digit": 8,
+        "predicted_digit": 6,
+        "confidence": 0.6262968182563782
+      },
+      {
+        "test_index": 4890,
+        "true_digit": 8,
+        "predicted_digit": 6,
+        "confidence": 0.4511215090751648
+      },
+      {
+        "test_index": 4956,
+        "true_digit": 8,
+        "predicted_digit": 4,
+        "confidence": 0.9600788354873657
+      },
+      {
+        "test_index": 4997,
+        "true_digit": 2,
+        "predicted_digit": 3,
+        "confidence": 0.8819504976272583
+      },
+      {
+        "test_index": 5068,
+        "true_digit": 4,
+        "predicted_digit": 7,
+        "confidence": 0.67916339635849
+      },
+      {
+        "test_index": 5749,
+        "true_digit": 8,
+        "predicted_digit": 5,
+        "confidence": 0.7668911814689636
+      },
+      {
+        "test_index": 5887,
+        "true_digit": 7,
+        "predicted_digit": 0,
+        "confidence": 0.5333498120307922
+      },
+      {
+        "test_index": 5937,
+        "true_digit": 5,
+        "predicted_digit": 3,
+        "confidence": 0.6029799580574036
+      },
+      {
+        "test_index": 5955,
+        "true_digit": 3,
+        "predicted_digit": 8,
+        "confidence": 0.49538934230804443
+      },
+      {
+        "test_index": 5982,
+        "true_digit": 5,
+        "predicted_digit": 3,
+        "confidence": 0.5676416158676147
+      },
+      {
+        "test_index": 6071,
+        "true_digit": 9,
+        "predicted_digit": 3,
+        "confidence": 0.44035911560058594
+      },
+      {
+        "test_index": 6081,
+        "true_digit": 9,
+        "predicted_digit": 5,
+        "confidence": 0.6710882186889648
+      },
+      {
+        "test_index": 6091,
+        "true_digit": 9,
+        "predicted_digit": 5,
+        "confidence": 0.967769980430603
+      },
+      {
+        "test_index": 6166,
+        "true_digit": 9,
+        "predicted_digit": 3,
+        "confidence": 0.910412073135376
+      },
+      {
+        "test_index": 6168,
+        "true_digit": 9,
+        "predicted_digit": 3,
+        "confidence": 0.5114772915840149
+      },
+      {
+        "test_index": 6172,
+        "true_digit": 9,
+        "predicted_digit": 5,
+        "confidence": 0.8472656011581421
+      },
+      {
+        "test_index": 6505,
+        "true_digit": 9,
+        "predicted_digit": 0,
+        "confidence": 0.5597913861274719
+      },
+      {
+        "test_index": 6555,
+        "true_digit": 8,
+        "predicted_digit": 9,
+        "confidence": 0.4152802526950836
+      },
+      {
+        "test_index": 6571,
+        "true_digit": 9,
+        "predicted_digit": 7,
+        "confidence": 0.712220311164856
+      },
+      {
+        "test_index": 6576,
+        "true_digit": 7,
+        "predicted_digit": 1,
+        "confidence": 0.6901541948318481
+      },
+      {
+        "test_index": 6597,
+        "true_digit": 0,
+        "predicted_digit": 7,
+        "confidence": 0.6039564609527588
+      },
+      {
+        "test_index": 6608,
+        "true_digit": 9,
+        "predicted_digit": 5,
+        "confidence": 0.7197734117507935
+      },
+      {
+        "test_index": 6625,
+        "true_digit": 8,
+        "predicted_digit": 2,
+        "confidence": 0.8005472421646118
+      },
+      {
+        "test_index": 6651,
+        "true_digit": 0,
+        "predicted_digit": 6,
+        "confidence": 0.5254423022270203
+      },
+      {
+        "test_index": 6721,
+        "true_digit": 2,
+        "predicted_digit": 7,
+        "confidence": 0.5920403003692627
+      },
+      {
+        "test_index": 6783,
+        "true_digit": 1,
+        "predicted_digit": 6,
+        "confidence": 0.8064693808555603
+      },
+      {
+        "test_index": 6796,
+        "true_digit": 2,
+        "predicted_digit": 7,
+        "confidence": 0.647909939289093
+      },
+      {
+        "test_index": 7434,
+        "true_digit": 4,
+        "predicted_digit": 8,
+        "confidence": 0.513809084892273
+      },
+      {
+        "test_index": 7921,
+        "true_digit": 8,
+        "predicted_digit": 3,
+        "confidence": 0.5010791420936584
+      },
+      {
+        "test_index": 8059,
+        "true_digit": 2,
+        "predicted_digit": 1,
+        "confidence": 0.5048356652259827
+      },
+      {
+        "test_index": 8094,
+        "true_digit": 2,
+        "predicted_digit": 8,
+        "confidence": 0.7785027623176575
+      },
+      {
+        "test_index": 8325,
+        "true_digit": 0,
+        "predicted_digit": 6,
+        "confidence": 0.8361776471138
+      },
+      {
+        "test_index": 8332,
+        "true_digit": 9,
+        "predicted_digit": 7,
+        "confidence": 0.6650708317756653
+      },
+      {
+        "test_index": 8408,
+        "true_digit": 8,
+        "predicted_digit": 5,
+        "confidence": 0.8228265643119812
+      },
+      {
+        "test_index": 8527,
+        "true_digit": 4,
+        "predicted_digit": 7,
+        "confidence": 0.46969369053840637
+      },
+      {
+        "test_index": 9009,
+        "true_digit": 7,
+        "predicted_digit": 2,
+        "confidence": 0.886826753616333
+      },
+      {
+        "test_index": 9015,
+        "true_digit": 7,
+        "predicted_digit": 2,
+        "confidence": 0.6105742454528809
+      },
+      {
+        "test_index": 9316,
+        "true_digit": 8,
+        "predicted_digit": 5,
+        "confidence": 0.6595474481582642
+      },
+      {
+        "test_index": 9530,
+        "true_digit": 9,
+        "predicted_digit": 8,
+        "confidence": 0.822263240814209
+      },
+      {
+        "test_index": 9638,
+        "true_digit": 9,
+        "predicted_digit": 7,
+        "confidence": 0.9217826128005981
+      },
+      {
+        "test_index": 9642,
+        "true_digit": 9,
+        "predicted_digit": 7,
+        "confidence": 0.9051061272621155
+      },
+      {
+        "test_index": 9664,
+        "true_digit": 2,
+        "predicted_digit": 7,
+        "confidence": 0.9792513847351074
+      },
+      {
+        "test_index": 9669,
+        "true_digit": 4,
+        "predicted_digit": 7,
+        "confidence": 0.73934406042099
+      },
+      {
+        "test_index": 9692,
+        "true_digit": 9,
+        "predicted_digit": 7,
+        "confidence": 0.8039671182632446
+      },
+      {
+        "test_index": 9729,
+        "true_digit": 5,
+        "predicted_digit": 6,
+        "confidence": 0.9929980039596558
+      },
+      {
+        "test_index": 9768,
+        "true_digit": 2,
+        "predicted_digit": 0,
+        "confidence": 0.5165988802909851
+      },
+      {
+        "test_index": 9770,
+        "true_digit": 5,
+        "predicted_digit": 0,
+        "confidence": 0.8704460859298706
+      },
+      {
+        "test_index": 9792,
+        "true_digit": 4,
+        "predicted_digit": 7,
+        "confidence": 0.3621937036514282
+      },
+      {
+        "test_index": 9839,
+        "true_digit": 2,
+        "predicted_digit": 3,
+        "confidence": 0.5819071531295776
+      },
+      {
+        "test_index": 9856,
+        "true_digit": 9,
+        "predicted_digit": 5,
+        "confidence": 0.7152164578437805
+      }
+    ]
+  },
+  "python_app_preprocessing": {
+    "total": 10000,
+    "correct": 9788,
+    "incorrect": 212,
+    "accuracy": 0.9788,
+    "accuracy_wilson_95_ci": [
+      0.9757873635490282,
+      0.9814449196112118
+    ],
+    "accepted_count": 10000,
+    "rejected_count": 0,
+    "per_class": [
+      {
+        "digit": 0,
+        "precision": 0.9777777777777777,
+        "recall": 0.9877551020408163,
+        "f1": 0.9827411167512691,
+        "support": 980,
+        "correct": 968,
+        "rejected": 0
+      },
+      {
+        "digit": 1,
+        "precision": 0.9938053097345133,
+        "recall": 0.9894273127753304,
+        "f1": 0.9916114790286975,
+        "support": 1135,
+        "correct": 1123,
+        "rejected": 0
+      },
+      {
+        "digit": 2,
+        "precision": 0.980411361410382,
+        "recall": 0.9699612403100775,
+        "f1": 0.9751583049196298,
+        "support": 1032,
+        "correct": 1001,
+        "rejected": 0
+      },
+      {
+        "digit": 3,
+        "precision": 0.9608404966571156,
+        "recall": 0.996039603960396,
+        "f1": 0.9781234807972776,
+        "support": 1010,
+        "correct": 1006,
+        "rejected": 0
+      },
+      {
+        "digit": 4,
+        "precision": 0.9807302231237323,
+        "recall": 0.984725050916497,
+        "f1": 0.9827235772357724,
+        "support": 982,
+        "correct": 967,
+        "rejected": 0
+      },
+      {
+        "digit": 5,
+        "precision": 0.9766407119021134,
+        "recall": 0.984304932735426,
+        "f1": 0.9804578447794527,
+        "support": 892,
+        "correct": 878,
+        "rejected": 0
+      },
+      {
+        "digit": 6,
+        "precision": 0.9762150982419855,
+        "recall": 0.9853862212943633,
+        "f1": 0.9807792207792208,
+        "support": 958,
+        "correct": 944,
+        "rejected": 0
+      },
+      {
+        "digit": 7,
+        "precision": 0.9711538461538461,
+        "recall": 0.9824902723735408,
+        "f1": 0.9767891682785299,
+        "support": 1028,
+        "correct": 1010,
+        "rejected": 0
+      },
+      {
+        "digit": 8,
+        "precision": 0.9808917197452229,
+        "recall": 0.9486652977412731,
+        "f1": 0.964509394572025,
+        "support": 974,
+        "correct": 924,
+        "rejected": 0
+      },
+      {
+        "digit": 9,
+        "precision": 0.9887525562372188,
+        "recall": 0.958374628344896,
+        "f1": 0.9733266230498239,
+        "support": 1009,
+        "correct": 967,
+        "rejected": 0
+      }
+    ],
+    "macro_f1": 0.9786220210191698,
+    "weighted_f1": 0.9787680831252171,
+    "confusion_matrix": [
+      [
+        968,
+        0,
+        1,
+        1,
+        2,
+        1,
+        3,
+        0,
+        0,
+        4
+      ],
+      [
+        2,
+        1123,
+        2,
+        2,
+        0,
+        1,
+        5,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1001,
+        10,
+        5,
+        0,
+        1,
+        12,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1006,
+        0,
+        3,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        1,
+        967,
+        0,
+        0,
+        4,
+        4,
+        5
+      ],
+      [
+        2,
+        0,
+        0,
+        8,
+        0,
+        878,
+        3,
+        0,
+        0,
+        1
+      ],
+      [
+        5,
+        1,
+        0,
+        0,
+        3,
+        5,
+        944,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        12,
+        4,
+        0,
+        0,
+        0,
+        1010,
+        1,
+        0
+      ],
+      [
+        12,
+        0,
+        3,
+        12,
+        1,
+        7,
+        11,
+        3,
+        924,
+        1
+      ],
+      [
+        0,
+        3,
+        2,
+        3,
+        8,
+        4,
+        0,
+        10,
+        12,
+        967
+      ]
+    ],
+    "confusion_matrix_rows": "true label 0..9",
+    "confusion_matrix_columns": "predicted label 0..9; rejected inputs counted separately",
+    "most_frequent_confusions": [
+      {
+        "true_digit": 2,
+        "predicted_digit": 7,
+        "count": 12
+      },
+      {
+        "true_digit": 7,
+        "predicted_digit": 2,
+        "count": 12
+      },
+      {
+        "true_digit": 8,
+        "predicted_digit": 0,
+        "count": 12
+      },
+      {
+        "true_digit": 8,
+        "predicted_digit": 3,
+        "count": 12
+      },
+      {
+        "true_digit": 9,
+        "predicted_digit": 8,
+        "count": 12
+      },
+      {
+        "true_digit": 8,
+        "predicted_digit": 6,
+        "count": 11
+      },
+      {
+        "true_digit": 2,
+        "predicted_digit": 3,
+        "count": 10
+      },
+      {
+        "true_digit": 9,
+        "predicted_digit": 7,
+        "count": 10
+      },
+      {
+        "true_digit": 5,
+        "predicted_digit": 3,
+        "count": 8
+      },
+      {
+        "true_digit": 9,
+        "predicted_digit": 4,
+        "count": 8
+      }
+    ],
+    "mode": "python_app_preprocessing",
+    "cross_entropy_on_accepted_inputs": 0.06351361719421111,
+    "seconds": 1.104,
+    "rejections": [],
+    "errors": [
+      {
+        "test_index": 20,
+        "true_digit": 9,
+        "predicted_digit": 7,
+        "confidence": 0.5830879211425781
+      },
+      {
+        "test_index": 73,
+        "true_digit": 9,
+        "predicted_digit": 8,
+        "confidence": 0.50507652759552
+      },
+      {
+        "test_index": 78,
+        "true_digit": 9,
+        "predicted_digit": 8,
+        "confidence": 0.9536888599395752
+      },
+      {
+        "test_index": 95,
+        "true_digit": 4,
+        "predicted_digit": 8,
+        "confidence": 0.7783367037773132
+      },
+      {
+        "test_index": 184,
+        "true_digit": 8,
+        "predicted_digit": 3,
+        "confidence": 0.9087549448013306
+      },
+      {
+        "test_index": 259,
+        "true_digit": 6,
+        "predicted_digit": 0,
+        "confidence": 0.7872839570045471
+      },
+      {
+        "test_index": 264,
+        "true_digit": 9,
+        "predicted_digit": 4,
+        "confidence": 0.46751871705055237
+      },
+      {
+        "test_index": 266,
+        "true_digit": 8,
+        "predicted_digit": 0,
+        "confidence": 0.6790655255317688
+      },
+      {
+        "test_index": 320,
+        "true_digit": 9,
+        "predicted_digit": 8,
+        "confidence": 0.8847837448120117
+      },
+      {
+        "test_index": 326,
+        "true_digit": 2,
+        "predicted_digit": 4,
+        "confidence": 0.6262331008911133
+      },
+      {
+        "test_index": 338,
+        "true_digit": 8,
+        "predicted_digit": 5,
+        "confidence": 0.5946062803268433
+      },
+      {
+        "test_index": 359,
+        "true_digit": 9,
+        "predicted_digit": 8,
+        "confidence": 0.6658350229263306
+      },
+      {
+        "test_index": 445,
+        "true_digit": 6,
+        "predicted_digit": 0,
+        "confidence": 0.787484884262085
+      },
+      {
+        "test_index": 490,
+        "true_digit": 0,
+        "predicted_digit": 4,
+        "confidence": 0.7489192485809326
+      },
+      {
+        "test_index": 551,
+        "true_digit": 7,
+        "predicted_digit": 3,
+        "confidence": 0.41841819882392883
+      },
+      {
+        "test_index": 582,
+        "true_digit": 8,
+        "predicted_digit": 3,
+        "confidence": 0.6747498512268066
+      },
+      {
+        "test_index": 591,
+        "true_digit": 8,
+        "predicted_digit": 0,
+        "confidence": 0.39012426137924194
+      },
+      {
+        "test_index": 642,
+        "true_digit": 0,
+        "predicted_digit": 9,
+        "confidence": 0.4937051832675934
+      },
+      {
+        "test_index": 646,
+        "true_digit": 2,
+        "predicted_digit": 4,
+        "confidence": 0.750031054019928
+      },
+      {
+        "test_index": 655,
+        "true_digit": 8,
+        "predicted_digit": 3,
+        "confidence": 0.5167930126190186
+      },
+      {
+        "test_index": 684,
+        "true_digit": 7,
+        "predicted_digit": 3,
+        "confidence": 0.5211759805679321
+      },
+      {
+        "test_index": 717,
+        "true_digit": 0,
+        "predicted_digit": 5,
+        "confidence": 0.6033051013946533
+      },
+      {
+        "test_index": 740,
+        "true_digit": 4,
+        "predicted_digit": 9,
+        "confidence": 0.7386325001716614
+      },
+      {
+        "test_index": 813,
+        "true_digit": 9,
+        "predicted_digit": 8,
+        "confidence": 0.9648776650428772
+      },
+      {
+        "test_index": 844,
+        "true_digit": 8,
+        "predicted_digit": 7,
+        "confidence": 0.48531216382980347
+      },
+      {
+        "test_index": 882,
+        "true_digit": 9,
+        "predicted_digit": 7,
+        "confidence": 0.7763940095901489
+      },
+      {
+        "test_index": 947,
+        "true_digit": 8,
+        "predicted_digit": 9,
+        "confidence": 0.48858484625816345
+      },
+      {
+        "test_index": 956,
+        "true_digit": 1,
+        "predicted_digit": 2,
+        "confidence": 0.40414273738861084
+      },
+      {
+        "test_index": 965,
+        "true_digit": 6,
+        "predicted_digit": 0,
+        "confidence": 0.9879748821258545
+      },
+      {
+        "test_index": 1002,
+        "true_digit": 2,
+        "predicted_digit": 3,
+        "confidence": 0.6202496290206909
+      },
+      {
+        "test_index": 1014,
+        "true_digit": 6,
+        "predicted_digit": 5,
+        "confidence": 0.884959876537323
+      },
+      {
+        "test_index": 1039,
+        "true_digit": 7,
+        "predicted_digit": 3,
+        "confidence": 0.48879125714302063
+      },
+      {
+        "test_index": 1182,
+        "true_digit": 6,
+        "predicted_digit": 5,
+        "confidence": 0.748078465461731
+      },
+      {
+        "test_index": 1191,
+        "true_digit": 0,
+        "predicted_digit": 9,
+        "confidence": 0.6682214140892029
+      },
+      {
+        "test_index": 1202,
+        "true_digit": 8,
+        "predicted_digit": 6,
+        "confidence": 0.6351903676986694
+      },
+      {
+        "test_index": 1224,
+        "true_digit": 2,
+        "predicted_digit": 4,
+        "confidence": 0.814130425453186
+      },
+      {
+        "test_index": 1226,
+        "true_digit": 7,
+        "predicted_digit": 2,
+        "confidence": 0.7613282799720764
+      },
+      {
+        "test_index": 1232,
+        "true_digit": 9,
+        "predicted_digit": 4,
+        "confidence": 0.751879096031189
+      },
+      {
+        "test_index": 1247,
+        "true_digit": 9,
+        "predicted_digit": 5,
+        "confidence": 0.812212347984314
+      },
+      {
+        "test_index": 1299,
+        "true_digit": 5,
+        "predicted_digit": 3,
+        "confidence": 0.8277801871299744
+      },
+      {
+        "test_index": 1319,
+        "true_digit": 8,
+        "predicted_digit": 0,
+        "confidence": 0.8330386281013489
+      },
+      {
+        "test_index": 1326,
+        "true_digit": 7,
+        "predicted_digit": 2,
+        "confidence": 0.8309215307235718
+      },
+      {
+        "test_index": 1364,
+        "true_digit": 8,
+        "predicted_digit": 2,
+        "confidence": 0.49329912662506104
+      },
+      {
+        "test_index": 1393,
+        "true_digit": 5,
+        "predicted_digit": 3,
+        "confidence": 0.9794898629188538
+      },
+      {
+        "test_index": 1403,
+        "true_digit": 1,
+        "predicted_digit": 6,
+        "confidence": 0.5668972134590149
+      },
+      {
+        "test_index": 1415,
+        "true_digit": 8,
+        "predicted_digit": 6,
+        "confidence": 0.41714224219322205
+      },
+      {
+        "test_index": 1523,
+        "true_digit": 8,
+        "predicted_digit": 6,
+        "confidence": 0.5378322601318359
+      },
+      {
+        "test_index": 1527,
+        "true_digit": 1,
+        "predicted_digit": 5,
+        "confidence": 0.5561480522155762
+      },
+      {
+        "test_index": 1530,
+        "true_digit": 8,
+        "predicted_digit": 7,
+        "confidence": 0.7931256890296936
+      },
+      {
+        "test_index": 1553,
+        "true_digit": 9,
+        "predicted_digit": 3,
+        "confidence": 0.5799856781959534
+      },
+      {
+        "test_index": 1621,
+        "true_digit": 0,
+        "predicted_digit": 6,
+        "confidence": 0.8791041374206543
+      },
+      {
+        "test_index": 1709,
+        "true_digit": 9,
+        "predicted_digit": 5,
+        "confidence": 0.4921884536743164
+      },
+      {
+        "test_index": 1717,
+        "true_digit": 8,
+        "predicted_digit": 0,
+        "confidence": 0.7247850894927979
+      },
+      {
+        "test_index": 1722,
+        "true_digit": 2,
+        "predicted_digit": 7,
+        "confidence": 0.6713904738426208
+      },
+      {
+        "test_index": 1737,
+        "true_digit": 5,
+        "predicted_digit": 3,
+        "confidence": 0.8907848000526428
+      },
+      {
+        "test_index": 1740,
+        "true_digit": 8,
+        "predicted_digit": 5,
+        "confidence": 0.7285438776016235
+      },
+      {
+        "test_index": 1754,
+        "true_digit": 7,
+        "predicted_digit": 2,
+        "confidence": 0.4953920245170593
+      },
+      {
+        "test_index": 1813,
+        "true_digit": 8,
+        "predicted_digit": 5,
+        "confidence": 0.4965858459472656
+      },
+      {
+        "test_index": 1878,
+        "true_digit": 8,
+        "predicted_digit": 3,
+        "confidence": 0.9569094777107239
+      },
+      {
+        "test_index": 1901,
+        "true_digit": 9,
+        "predicted_digit": 4,
+        "confidence": 0.9743446707725525
+      },
+      {
+        "test_index": 1955,
+        "true_digit": 8,
+        "predicted_digit": 2,
+        "confidence": 0.6870179772377014
+      },
+      {
+        "test_index": 2018,
+        "true_digit": 1,
+        "predicted_digit": 3,
+        "confidence": 0.32571297883987427
+      },
+      {
+        "test_index": 2043,
+        "true_digit": 4,
+        "predicted_digit": 8,
+        "confidence": 0.9875554442405701
+      },
+      {
+        "test_index": 2053,
+        "true_digit": 4,
+        "predicted_digit": 9,
+        "confidence": 0.7078657150268555
+      },
+      {
+        "test_index": 2090,
+        "true_digit": 4,
+        "predicted_digit": 1,
+        "confidence": 0.8531563878059387
+      },
+      {
+        "test_index": 2107,
+        "true_digit": 8,
+        "predicted_digit": 0,
+        "confidence": 0.9426996111869812
+      },
+      {
+        "test_index": 2130,
+        "true_digit": 4,
+        "predicted_digit": 9,
+        "confidence": 0.6631333827972412
+      },
+      {
+        "test_index": 2182,
+        "true_digit": 1,
+        "predicted_digit": 3,
+        "confidence": 0.8751434683799744
+      },
+      {
+        "test_index": 2186,
+        "true_digit": 2,
+        "predicted_digit": 3,
+        "confidence": 0.87455153465271
+      },
+      {
+        "test_index": 2195,
+        "true_digit": 7,
+        "predicted_digit": 2,
+        "confidence": 0.5879070162773132
+      },
+      {
+        "test_index": 2272,
+        "true_digit": 8,
+        "predicted_digit": 0,
+        "confidence": 0.7701782584190369
+      },
+      {
+        "test_index": 2280,
+        "true_digit": 3,
+        "predicted_digit": 5,
+        "confidence": 0.7384853959083557
+      },
+      {
+        "test_index": 2293,
+        "true_digit": 9,
+        "predicted_digit": 4,
+        "confidence": 0.794042706489563
+      },
+      {
+        "test_index": 2386,
+        "true_digit": 4,
+        "predicted_digit": 7,
+        "confidence": 0.7921391725540161
+      },
+      {
+        "test_index": 2387,
+        "true_digit": 9,
+        "predicted_digit": 1,
+        "confidence": 0.8156064748764038
+      },
+      {
+        "test_index": 2422,
+        "true_digit": 6,
+        "predicted_digit": 4,
+        "confidence": 0.7635005712509155
+      },
+      {
+        "test_index": 2454,
+        "true_digit": 6,
+        "predicted_digit": 5,
+        "confidence": 0.498599112033844
+      },
+      {
+        "test_index": 2455,
+        "true_digit": 0,
+        "predicted_digit": 6,
+        "confidence": 0.7054580450057983
+      },
+      {
+        "test_index": 2462,
+        "true_digit": 2,
+        "predicted_digit": 0,
+        "confidence": 0.9322367310523987
+      },
+      {
+        "test_index": 2488,
+        "true_digit": 2,
+        "predicted_digit": 4,
+        "confidence": 0.5429308414459229
+      },
+      {
+        "test_index": 2597,
+        "true_digit": 5,
+        "predicted_digit": 3,
+        "confidence": 0.9919630289077759
+      },
+      {
+        "test_index": 2636,
+        "true_digit": 8,
+        "predicted_digit": 0,
+        "confidence": 0.8881614804267883
+      },
+      {
+        "test_index": 2654,
+        "true_digit": 6,
+        "predicted_digit": 1,
+        "confidence": 0.5613247752189636
+      },
+      {
+        "test_index": 2720,
+        "true_digit": 9,
+        "predicted_digit": 8,
+        "confidence": 0.4950611889362335
+      },
+      {
+        "test_index": 2734,
+        "true_digit": 1,
+        "predicted_digit": 6,
+        "confidence": 0.9903996586799622
+      },
+      {
+        "test_index": 2753,
+        "true_digit": 1,
+        "predicted_digit": 6,
+        "confidence": 0.6444348096847534
+      },
+      {
+        "test_index": 2758,
+        "true_digit": 8,
+        "predicted_digit": 0,
+        "confidence": 0.9411429762840271
+      },
+      {
+        "test_index": 2780,
+        "true_digit": 2,
+        "predicted_digit": 3,
+        "confidence": 0.9432414174079895
+      },
+      {
+        "test_index": 2810,
+        "true_digit": 5,
+        "predicted_digit": 3,
+        "confidence": 0.7353028059005737
+      },
+      {
+        "test_index": 2834,
+        "true_digit": 8,
+        "predicted_digit": 6,
+        "confidence": 0.4854535460472107
+      },
+      {
+        "test_index": 2896,
+        "true_digit": 8,
+        "predicted_digit": 0,
+        "confidence": 0.9993047714233398
+      },
+      {
+        "test_index": 2927,
+        "true_digit": 3,
+        "predicted_digit": 7,
+        "confidence": 0.7960917949676514
+      },
+      {
+        "test_index": 2939,
+        "true_digit": 9,
+        "predicted_digit": 5,
+        "confidence": 0.7365257740020752
+      },
+      {
+        "test_index": 2959,
+        "true_digit": 2,
+        "predicted_digit": 7,
+        "confidence": 0.44023197889328003
+      },
+      {
+        "test_index": 2995,
+        "true_digit": 6,
+        "predicted_digit": 5,
+        "confidence": 0.4950731098651886
+      },
+      {
+        "test_index": 3023,
+        "true_digit": 8,
+        "predicted_digit": 6,
+        "confidence": 0.4182611107826233
+      },
+      {
+        "test_index": 3030,
+        "true_digit": 6,
+        "predicted_digit": 0,
+        "confidence": 0.5558304190635681
+      },
+      {
+        "test_index": 3060,
+        "true_digit": 9,
+        "predicted_digit": 2,
+        "confidence": 0.3708643615245819
+      },
+      {
+        "test_index": 3073,
+        "true_digit": 1,
+        "predicted_digit": 2,
+        "confidence": 0.9666538834571838
+      },
+      {
+        "test_index": 3250,
+        "true_digit": 2,
+        "predicted_digit": 6,
+        "confidence": 0.7009361982345581
+      },
+      {
+        "test_index": 3330,
+        "true_digit": 2,
+        "predicted_digit": 3,
+        "confidence": 0.846693754196167
+      },
+      {
+        "test_index": 3369,
+        "true_digit": 9,
+        "predicted_digit": 8,
+        "confidence": 0.6330244541168213
+      },
+      {
+        "test_index": 3422,
+        "true_digit": 6,
+        "predicted_digit": 0,
+        "confidence": 0.5619662404060364
+      },
+      {
+        "test_index": 3503,
+        "true_digit": 9,
+        "predicted_digit": 1,
+        "confidence": 0.44931545853614807
+      },
+      {
+        "test_index": 3520,
+        "true_digit": 6,
+        "predicted_digit": 4,
+        "confidence": 0.8236013650894165
+      },
+      {
+        "test_index": 3534,
+        "true_digit": 4,
+        "predicted_digit": 8,
+        "confidence": 0.9889608025550842
+      },
+      {
+        "test_index": 3540,
+        "true_digit": 0,
+        "predicted_digit": 9,
+        "confidence": 0.9083430767059326
+      },
+      {
+        "test_index": 3558,
+        "true_digit": 5,
+        "predicted_digit": 0,
+        "confidence": 0.8910772204399109
+      },
+      {
+        "test_index": 3559,
+        "true_digit": 8,
+        "predicted_digit": 0,
+        "confidence": 0.9705782532691956
+      },
+      {
+        "test_index": 3597,
+        "true_digit": 9,
+        "predicted_digit": 3,
+        "confidence": 0.5644266605377197
+      },
+      {
+        "test_index": 3626,
+        "true_digit": 8,
+        "predicted_digit": 3,
+        "confidence": 0.7888779044151306
+      },
+      {
+        "test_index": 3629,
+        "true_digit": 8,
+        "predicted_digit": 3,
+        "confidence": 0.35980352759361267
+      },
+      {
+        "test_index": 3635,
+        "true_digit": 8,
+        "predicted_digit": 6,
+        "confidence": 0.6732181906700134
+      },
+      {
+        "test_index": 3726,
+        "true_digit": 4,
+        "predicted_digit": 9,
+        "confidence": 0.8444937467575073
+      },
+      {
+        "test_index": 3727,
+        "true_digit": 8,
+        "predicted_digit": 3,
+        "confidence": 0.6006163358688354
+      },
+      {
+        "test_index": 3751,
+        "true_digit": 7,
+        "predicted_digit": 2,
+        "confidence": 0.608645498752594
+      },
+      {
+        "test_index": 3767,
+        "true_digit": 7,
+        "predicted_digit": 2,
+        "confidence": 0.4887503385543823
+      },
+      {
+        "test_index": 3808,
+        "true_digit": 7,
+        "predicted_digit": 8,
+        "confidence": 0.8790380954742432
+      },
+      {
+        "test_index": 3811,
+        "true_digit": 2,
+        "predicted_digit": 3,
+        "confidence": 0.7424766421318054
+      },
+      {
+        "test_index": 3850,
+        "true_digit": 9,
+        "predicted_digit": 4,
+        "confidence": 0.8602233529090881
+      },
+      {
+        "test_index": 3869,
+        "true_digit": 9,
+        "predicted_digit": 4,
+        "confidence": 0.6956775784492493
+      },
+      {
+        "test_index": 3871,
+        "true_digit": 8,
+        "predicted_digit": 3,
+        "confidence": 0.46393144130706787
+      },
+      {
+        "test_index": 3943,
+        "true_digit": 3,
+        "predicted_digit": 5,
+        "confidence": 0.5750340223312378
+      },
+      {
+        "test_index": 3985,
+        "true_digit": 9,
+        "predicted_digit": 4,
+        "confidence": 0.6860628128051758
+      },
+      {
+        "test_index": 4065,
+        "true_digit": 0,
+        "predicted_digit": 2,
+        "confidence": 0.5549888014793396
+      },
+      {
+        "test_index": 4075,
+        "true_digit": 8,
+        "predicted_digit": 0,
+        "confidence": 0.4963330328464508
+      },
+      {
+        "test_index": 4100,
+        "true_digit": 2,
+        "predicted_digit": 3,
+        "confidence": 0.9070843458175659
+      },
+      {
+        "test_index": 4116,
+        "true_digit": 8,
+        "predicted_digit": 6,
+        "confidence": 0.8664637207984924
+      },
+      {
+        "test_index": 4176,
+        "true_digit": 2,
+        "predicted_digit": 7,
+        "confidence": 0.9896794557571411
+      },
+      {
+        "test_index": 4224,
+        "true_digit": 9,
+        "predicted_digit": 7,
+        "confidence": 0.9189662337303162
+      },
+      {
+        "test_index": 4238,
+        "true_digit": 7,
+        "predicted_digit": 3,
+        "confidence": 0.7040553092956543
+      },
+      {
+        "test_index": 4265,
+        "true_digit": 4,
+        "predicted_digit": 3,
+        "confidence": 0.5720199942588806
+      },
+      {
+        "test_index": 4294,
+        "true_digit": 9,
+        "predicted_digit": 7,
+        "confidence": 0.9308789372444153
+      },
+      {
+        "test_index": 4308,
+        "true_digit": 1,
+        "predicted_digit": 6,
+        "confidence": 0.7559352517127991
+      },
+      {
+        "test_index": 4313,
+        "true_digit": 4,
+        "predicted_digit": 7,
+        "confidence": 0.6238523125648499
+      },
+      {
+        "test_index": 4344,
+        "true_digit": 9,
+        "predicted_digit": 2,
+        "confidence": 0.3980288803577423
+      },
+      {
+        "test_index": 4497,
+        "true_digit": 8,
+        "predicted_digit": 7,
+        "confidence": 0.4594208598136902
+      },
+      {
+        "test_index": 4500,
+        "true_digit": 9,
+        "predicted_digit": 1,
+        "confidence": 0.8190670013427734
+      },
+      {
+        "test_index": 4536,
+        "true_digit": 6,
+        "predicted_digit": 5,
+        "confidence": 0.7170839905738831
+      },
+      {
+        "test_index": 4548,
+        "true_digit": 5,
+        "predicted_digit": 6,
+        "confidence": 0.5247779488563538
+      },
+      {
+        "test_index": 4615,
+        "true_digit": 2,
+        "predicted_digit": 4,
+        "confidence": 0.9674221277236938
+      },
+      {
+        "test_index": 4671,
+        "true_digit": 8,
+        "predicted_digit": 3,
+        "confidence": 0.848849892616272
+      },
+      {
+        "test_index": 4731,
+        "true_digit": 8,
+        "predicted_digit": 3,
+        "confidence": 0.36364343762397766
+      },
+      {
+        "test_index": 4740,
+        "true_digit": 3,
+        "predicted_digit": 5,
+        "confidence": 0.9481052756309509
+      },
+      {
+        "test_index": 4743,
+        "true_digit": 8,
+        "predicted_digit": 3,
+        "confidence": 0.5026129484176636
+      },
+      {
+        "test_index": 4761,
+        "true_digit": 9,
+        "predicted_digit": 8,
+        "confidence": 0.9853164553642273
+      },
+      {
+        "test_index": 4807,
+        "true_digit": 8,
+        "predicted_digit": 0,
+        "confidence": 0.6403197646141052
+      },
+      {
+        "test_index": 4823,
+        "true_digit": 9,
+        "predicted_digit": 4,
+        "confidence": 0.9725757837295532
+      },
+      {
+        "test_index": 4860,
+        "true_digit": 4,
+        "predicted_digit": 9,
+        "confidence": 0.5076651573181152
+      },
+      {
+        "test_index": 4879,
+        "true_digit": 8,
+        "predicted_digit": 6,
+        "confidence": 0.9798611402511597
+      },
+      {
+        "test_index": 4890,
+        "true_digit": 8,
+        "predicted_digit": 6,
+        "confidence": 0.4637139141559601
+      },
+      {
+        "test_index": 4956,
+        "true_digit": 8,
+        "predicted_digit": 4,
+        "confidence": 0.7294170260429382
+      },
+      {
+        "test_index": 4997,
+        "true_digit": 2,
+        "predicted_digit": 3,
+        "confidence": 0.8891428112983704
+      },
+      {
+        "test_index": 5251,
+        "true_digit": 0,
+        "predicted_digit": 9,
+        "confidence": 0.8693927526473999
+      },
+      {
+        "test_index": 5299,
+        "true_digit": 9,
+        "predicted_digit": 7,
+        "confidence": 0.5156456828117371
+      },
+      {
+        "test_index": 5634,
+        "true_digit": 2,
+        "predicted_digit": 3,
+        "confidence": 0.9829460382461548
+      },
+      {
+        "test_index": 5654,
+        "true_digit": 7,
+        "predicted_digit": 2,
+        "confidence": 0.8334405422210693
+      },
+      {
+        "test_index": 5676,
+        "true_digit": 4,
+        "predicted_digit": 7,
+        "confidence": 0.6943486928939819
+      },
+      {
+        "test_index": 5803,
+        "true_digit": 8,
+        "predicted_digit": 5,
+        "confidence": 0.8626621961593628
+      },
+      {
+        "test_index": 5937,
+        "true_digit": 5,
+        "predicted_digit": 3,
+        "confidence": 0.7382514476776123
+      },
+      {
+        "test_index": 5982,
+        "true_digit": 5,
+        "predicted_digit": 3,
+        "confidence": 0.5355576276779175
+      },
+      {
+        "test_index": 6071,
+        "true_digit": 9,
+        "predicted_digit": 3,
+        "confidence": 0.667381763458252
+      },
+      {
+        "test_index": 6091,
+        "true_digit": 9,
+        "predicted_digit": 5,
+        "confidence": 0.5213281512260437
+      },
+      {
+        "test_index": 6400,
+        "true_digit": 0,
+        "predicted_digit": 4,
+        "confidence": 0.9443190693855286
+      },
+      {
+        "test_index": 6418,
+        "true_digit": 2,
+        "predicted_digit": 7,
+        "confidence": 0.5798402428627014
+      },
+      {
+        "test_index": 6571,
+        "true_digit": 9,
+        "predicted_digit": 7,
+        "confidence": 0.48396557569503784
+      },
+      {
+        "test_index": 6576,
+        "true_digit": 7,
+        "predicted_digit": 1,
+        "confidence": 0.935910701751709
+      },
+      {
+        "test_index": 6578,
+        "true_digit": 8,
+        "predicted_digit": 5,
+        "confidence": 0.6796010732650757
+      },
+      {
+        "test_index": 6597,
+        "true_digit": 0,
+        "predicted_digit": 3,
+        "confidence": 0.5011717081069946
+      },
+      {
+        "test_index": 6625,
+        "true_digit": 8,
+        "predicted_digit": 2,
+        "confidence": 0.38813114166259766
+      },
+      {
+        "test_index": 6721,
+        "true_digit": 2,
+        "predicted_digit": 7,
+        "confidence": 0.5989425778388977
+      },
+      {
+        "test_index": 6744,
+        "true_digit": 2,
+        "predicted_digit": 7,
+        "confidence": 0.8877535462379456
+      },
+      {
+        "test_index": 6783,
+        "true_digit": 1,
+        "predicted_digit": 6,
+        "confidence": 0.9987357258796692
+      },
+      {
+        "test_index": 6785,
+        "true_digit": 2,
+        "predicted_digit": 7,
+        "confidence": 0.8567171096801758
+      },
+      {
+        "test_index": 6796,
+        "true_digit": 2,
+        "predicted_digit": 7,
+        "confidence": 0.7409682273864746
+      },
+      {
+        "test_index": 6847,
+        "true_digit": 6,
+        "predicted_digit": 4,
+        "confidence": 0.6764838695526123
+      },
+      {
+        "test_index": 7212,
+        "true_digit": 2,
+        "predicted_digit": 7,
+        "confidence": 0.9289569854736328
+      },
+      {
+        "test_index": 7259,
+        "true_digit": 8,
+        "predicted_digit": 3,
+        "confidence": 0.5781170725822449
+      },
+      {
+        "test_index": 7434,
+        "true_digit": 4,
+        "predicted_digit": 8,
+        "confidence": 0.5189884305000305
+      },
+      {
+        "test_index": 7736,
+        "true_digit": 9,
+        "predicted_digit": 8,
+        "confidence": 0.4102368950843811
+      },
+      {
+        "test_index": 7899,
+        "true_digit": 1,
+        "predicted_digit": 0,
+        "confidence": 0.4143539369106293
+      },
+      {
+        "test_index": 7928,
+        "true_digit": 1,
+        "predicted_digit": 0,
+        "confidence": 0.5936285853385925
+      },
+      {
+        "test_index": 7978,
+        "true_digit": 7,
+        "predicted_digit": 2,
+        "confidence": 0.5223655104637146
+      },
+      {
+        "test_index": 7991,
+        "true_digit": 9,
+        "predicted_digit": 8,
+        "confidence": 0.530662477016449
+      },
+      {
+        "test_index": 8059,
+        "true_digit": 2,
+        "predicted_digit": 1,
+        "confidence": 0.5092319846153259
+      },
+      {
+        "test_index": 8094,
+        "true_digit": 2,
+        "predicted_digit": 8,
+        "confidence": 0.791984498500824
+      },
+      {
+        "test_index": 8160,
+        "true_digit": 5,
+        "predicted_digit": 9,
+        "confidence": 0.3886597454547882
+      },
+      {
+        "test_index": 8198,
+        "true_digit": 2,
+        "predicted_digit": 7,
+        "confidence": 0.4773876368999481
+      },
+      {
+        "test_index": 8316,
+        "true_digit": 7,
+        "predicted_digit": 2,
+        "confidence": 0.865276038646698
+      },
+      {
+        "test_index": 8325,
+        "true_digit": 0,
+        "predicted_digit": 6,
+        "confidence": 0.9005778431892395
+      },
+      {
+        "test_index": 8332,
+        "true_digit": 9,
+        "predicted_digit": 7,
+        "confidence": 0.8222334980964661
+      },
+      {
+        "test_index": 8408,
+        "true_digit": 8,
+        "predicted_digit": 5,
+        "confidence": 0.9676878452301025
+      },
+      {
+        "test_index": 8522,
+        "true_digit": 8,
+        "predicted_digit": 6,
+        "confidence": 0.8436349034309387
+      },
+      {
+        "test_index": 8653,
+        "true_digit": 5,
+        "predicted_digit": 3,
+        "confidence": 0.7351706624031067
+      },
+      {
+        "test_index": 9009,
+        "true_digit": 7,
+        "predicted_digit": 2,
+        "confidence": 0.8856866359710693
+      },
+      {
+        "test_index": 9010,
+        "true_digit": 2,
+        "predicted_digit": 3,
+        "confidence": 0.7382349371910095
+      },
+      {
+        "test_index": 9015,
+        "true_digit": 7,
+        "predicted_digit": 2,
+        "confidence": 0.6033151745796204
+      },
+      {
+        "test_index": 9375,
+        "true_digit": 8,
+        "predicted_digit": 5,
+        "confidence": 0.6887826919555664
+      },
+      {
+        "test_index": 9446,
+        "true_digit": 2,
+        "predicted_digit": 3,
+        "confidence": 0.4834253191947937
+      },
+      {
+        "test_index": 9450,
+        "true_digit": 8,
+        "predicted_digit": 6,
+        "confidence": 0.5522605776786804
+      },
+      {
+        "test_index": 9505,
+        "true_digit": 7,
+        "predicted_digit": 2,
+        "confidence": 0.8510607481002808
+      },
+      {
+        "test_index": 9530,
+        "true_digit": 9,
+        "predicted_digit": 8,
+        "confidence": 0.9982616305351257
+      },
+      {
+        "test_index": 9638,
+        "true_digit": 9,
+        "predicted_digit": 7,
+        "confidence": 0.9363527297973633
+      },
+      {
+        "test_index": 9642,
+        "true_digit": 9,
+        "predicted_digit": 7,
+        "confidence": 0.9775476455688477
+      },
+      {
+        "test_index": 9664,
+        "true_digit": 2,
+        "predicted_digit": 7,
+        "confidence": 0.9306250810623169
+      },
+      {
+        "test_index": 9669,
+        "true_digit": 4,
+        "predicted_digit": 7,
+        "confidence": 0.8007245063781738
+      },
+      {
+        "test_index": 9692,
+        "true_digit": 9,
+        "predicted_digit": 7,
+        "confidence": 0.8341856002807617
+      },
+      {
+        "test_index": 9700,
+        "true_digit": 2,
+        "predicted_digit": 7,
+        "confidence": 0.4935446083545685
+      },
+      {
+        "test_index": 9729,
+        "true_digit": 5,
+        "predicted_digit": 6,
+        "confidence": 0.9729886651039124
+      },
+      {
+        "test_index": 9733,
+        "true_digit": 9,
+        "predicted_digit": 8,
+        "confidence": 0.4930219054222107
+      },
+      {
+        "test_index": 9749,
+        "true_digit": 5,
+        "predicted_digit": 6,
+        "confidence": 0.7459036707878113
+      },
+      {
+        "test_index": 9770,
+        "true_digit": 5,
+        "predicted_digit": 0,
+        "confidence": 0.8539330363273621
+      }
+    ]
+  },
+  "browser_js_preprocessing_pytorch_cpu": {
+    "total": 10000,
+    "correct": 9788,
+    "incorrect": 212,
+    "accuracy": 0.9788,
+    "accuracy_wilson_95_ci": [
+      0.9757873635490282,
+      0.9814449196112118
+    ],
+    "accepted_count": 10000,
+    "rejected_count": 0,
+    "per_class": [
+      {
+        "digit": 0,
+        "precision": 0.9777777777777777,
+        "recall": 0.9877551020408163,
+        "f1": 0.9827411167512691,
+        "support": 980,
+        "correct": 968,
+        "rejected": 0
+      },
+      {
+        "digit": 1,
+        "precision": 0.9938053097345133,
+        "recall": 0.9894273127753304,
+        "f1": 0.9916114790286975,
+        "support": 1135,
+        "correct": 1123,
+        "rejected": 0
+      },
+      {
+        "digit": 2,
+        "precision": 0.980411361410382,
+        "recall": 0.9699612403100775,
+        "f1": 0.9751583049196298,
+        "support": 1032,
+        "correct": 1001,
+        "rejected": 0
+      },
+      {
+        "digit": 3,
+        "precision": 0.9608404966571156,
+        "recall": 0.996039603960396,
+        "f1": 0.9781234807972776,
+        "support": 1010,
+        "correct": 1006,
+        "rejected": 0
+      },
+      {
+        "digit": 4,
+        "precision": 0.9807302231237323,
+        "recall": 0.984725050916497,
+        "f1": 0.9827235772357724,
+        "support": 982,
+        "correct": 967,
+        "rejected": 0
+      },
+      {
+        "digit": 5,
+        "precision": 0.9766407119021134,
+        "recall": 0.984304932735426,
+        "f1": 0.9804578447794527,
+        "support": 892,
+        "correct": 878,
+        "rejected": 0
+      },
+      {
+        "digit": 6,
+        "precision": 0.9762150982419855,
+        "recall": 0.9853862212943633,
+        "f1": 0.9807792207792208,
+        "support": 958,
+        "correct": 944,
+        "rejected": 0
+      },
+      {
+        "digit": 7,
+        "precision": 0.9711538461538461,
+        "recall": 0.9824902723735408,
+        "f1": 0.9767891682785299,
+        "support": 1028,
+        "correct": 1010,
+        "rejected": 0
+      },
+      {
+        "digit": 8,
+        "precision": 0.9808917197452229,
+        "recall": 0.9486652977412731,
+        "f1": 0.964509394572025,
+        "support": 974,
+        "correct": 924,
+        "rejected": 0
+      },
+      {
+        "digit": 9,
+        "precision": 0.9887525562372188,
+        "recall": 0.958374628344896,
+        "f1": 0.9733266230498239,
+        "support": 1009,
+        "correct": 967,
+        "rejected": 0
+      }
+    ],
+    "macro_f1": 0.9786220210191698,
+    "weighted_f1": 0.9787680831252171,
+    "confusion_matrix": [
+      [
+        968,
+        0,
+        1,
+        1,
+        2,
+        1,
+        3,
+        0,
+        0,
+        4
+      ],
+      [
+        2,
+        1123,
+        2,
+        2,
+        0,
+        1,
+        5,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1001,
+        10,
+        5,
+        0,
+        1,
+        12,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1006,
+        0,
+        3,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        1,
+        967,
+        0,
+        0,
+        4,
+        4,
+        5
+      ],
+      [
+        2,
+        0,
+        0,
+        8,
+        0,
+        878,
+        3,
+        0,
+        0,
+        1
+      ],
+      [
+        5,
+        1,
+        0,
+        0,
+        3,
+        5,
+        944,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        12,
+        4,
+        0,
+        0,
+        0,
+        1010,
+        1,
+        0
+      ],
+      [
+        12,
+        0,
+        3,
+        12,
+        1,
+        7,
+        11,
+        3,
+        924,
+        1
+      ],
+      [
+        0,
+        3,
+        2,
+        3,
+        8,
+        4,
+        0,
+        10,
+        12,
+        967
+      ]
+    ],
+    "confusion_matrix_rows": "true label 0..9",
+    "confusion_matrix_columns": "predicted label 0..9; rejected inputs counted separately",
+    "most_frequent_confusions": [
+      {
+        "true_digit": 2,
+        "predicted_digit": 7,
+        "count": 12
+      },
+      {
+        "true_digit": 7,
+        "predicted_digit": 2,
+        "count": 12
+      },
+      {
+        "true_digit": 8,
+        "predicted_digit": 0,
+        "count": 12
+      },
+      {
+        "true_digit": 8,
+        "predicted_digit": 3,
+        "count": 12
+      },
+      {
+        "true_digit": 9,
+        "predicted_digit": 8,
+        "count": 12
+      },
+      {
+        "true_digit": 8,
+        "predicted_digit": 6,
+        "count": 11
+      },
+      {
+        "true_digit": 2,
+        "predicted_digit": 3,
+        "count": 10
+      },
+      {
+        "true_digit": 9,
+        "predicted_digit": 7,
+        "count": 10
+      },
+      {
+        "true_digit": 5,
+        "predicted_digit": 3,
+        "count": 8
+      },
+      {
+        "true_digit": 9,
+        "predicted_digit": 4,
+        "count": 8
+      }
+    ],
+    "mode": "browser_js_preprocessing_pytorch_cpu",
+    "cross_entropy_on_accepted_inputs": 0.06351361661604606,
+    "seconds": 0.276,
+    "rejections": [],
+    "errors": [
+      {
+        "test_index": 20,
+        "true_digit": 9,
+        "predicted_digit": 7,
+        "confidence": 0.5830876231193542
+      },
+      {
+        "test_index": 73,
+        "true_digit": 9,
+        "predicted_digit": 8,
+        "confidence": 0.50507652759552
+      },
+      {
+        "test_index": 78,
+        "true_digit": 9,
+        "predicted_digit": 8,
+        "confidence": 0.9536887407302856
+      },
+      {
+        "test_index": 95,
+        "true_digit": 4,
+        "predicted_digit": 8,
+        "confidence": 0.7783365249633789
+      },
+      {
+        "test_index": 184,
+        "true_digit": 8,
+        "predicted_digit": 3,
+        "confidence": 0.9087549448013306
+      },
+      {
+        "test_index": 259,
+        "true_digit": 6,
+        "predicted_digit": 0,
+        "confidence": 0.7872834205627441
+      },
+      {
+        "test_index": 264,
+        "true_digit": 9,
+        "predicted_digit": 4,
+        "confidence": 0.4675188362598419
+      },
+      {
+        "test_index": 266,
+        "true_digit": 8,
+        "predicted_digit": 0,
+        "confidence": 0.6790652275085449
+      },
+      {
+        "test_index": 320,
+        "true_digit": 9,
+        "predicted_digit": 8,
+        "confidence": 0.8847837448120117
+      },
+      {
+        "test_index": 326,
+        "true_digit": 2,
+        "predicted_digit": 4,
+        "confidence": 0.6262330412864685
+      },
+      {
+        "test_index": 338,
+        "true_digit": 8,
+        "predicted_digit": 5,
+        "confidence": 0.5946065783500671
+      },
+      {
+        "test_index": 359,
+        "true_digit": 9,
+        "predicted_digit": 8,
+        "confidence": 0.665834903717041
+      },
+      {
+        "test_index": 445,
+        "true_digit": 6,
+        "predicted_digit": 0,
+        "confidence": 0.7874847650527954
+      },
+      {
+        "test_index": 490,
+        "true_digit": 0,
+        "predicted_digit": 4,
+        "confidence": 0.7489187717437744
+      },
+      {
+        "test_index": 551,
+        "true_digit": 7,
+        "predicted_digit": 3,
+        "confidence": 0.41841787099838257
+      },
+      {
+        "test_index": 582,
+        "true_digit": 8,
+        "predicted_digit": 3,
+        "confidence": 0.6747498512268066
+      },
+      {
+        "test_index": 591,
+        "true_digit": 8,
+        "predicted_digit": 0,
+        "confidence": 0.39012423157691956
+      },
+      {
+        "test_index": 642,
+        "true_digit": 0,
+        "predicted_digit": 9,
+        "confidence": 0.49370577931404114
+      },
+      {
+        "test_index": 646,
+        "true_digit": 2,
+        "predicted_digit": 4,
+        "confidence": 0.750031054019928
+      },
+      {
+        "test_index": 655,
+        "true_digit": 8,
+        "predicted_digit": 3,
+        "confidence": 0.5167930722236633
+      },
+      {
+        "test_index": 684,
+        "true_digit": 7,
+        "predicted_digit": 3,
+        "confidence": 0.5211756825447083
+      },
+      {
+        "test_index": 717,
+        "true_digit": 0,
+        "predicted_digit": 5,
+        "confidence": 0.6033052206039429
+      },
+      {
+        "test_index": 740,
+        "true_digit": 4,
+        "predicted_digit": 9,
+        "confidence": 0.7386326193809509
+      },
+      {
+        "test_index": 813,
+        "true_digit": 9,
+        "predicted_digit": 8,
+        "confidence": 0.9648777842521667
+      },
+      {
+        "test_index": 844,
+        "true_digit": 8,
+        "predicted_digit": 7,
+        "confidence": 0.48531198501586914
+      },
+      {
+        "test_index": 882,
+        "true_digit": 9,
+        "predicted_digit": 7,
+        "confidence": 0.7763937711715698
+      },
+      {
+        "test_index": 947,
+        "true_digit": 8,
+        "predicted_digit": 9,
+        "confidence": 0.48858508467674255
+      },
+      {
+        "test_index": 956,
+        "true_digit": 1,
+        "predicted_digit": 2,
+        "confidence": 0.40414273738861084
+      },
+      {
+        "test_index": 965,
+        "true_digit": 6,
+        "predicted_digit": 0,
+        "confidence": 0.9879748821258545
+      },
+      {
+        "test_index": 1002,
+        "true_digit": 2,
+        "predicted_digit": 3,
+        "confidence": 0.6202493906021118
+      },
+      {
+        "test_index": 1014,
+        "true_digit": 6,
+        "predicted_digit": 5,
+        "confidence": 0.884959876537323
+      },
+      {
+        "test_index": 1039,
+        "true_digit": 7,
+        "predicted_digit": 3,
+        "confidence": 0.48879101872444153
+      },
+      {
+        "test_index": 1182,
+        "true_digit": 6,
+        "predicted_digit": 5,
+        "confidence": 0.7480786442756653
+      },
+      {
+        "test_index": 1191,
+        "true_digit": 0,
+        "predicted_digit": 9,
+        "confidence": 0.6682218909263611
+      },
+      {
+        "test_index": 1202,
+        "true_digit": 8,
+        "predicted_digit": 6,
+        "confidence": 0.6351903080940247
+      },
+      {
+        "test_index": 1224,
+        "true_digit": 2,
+        "predicted_digit": 4,
+        "confidence": 0.8141306638717651
+      },
+      {
+        "test_index": 1226,
+        "true_digit": 7,
+        "predicted_digit": 2,
+        "confidence": 0.7613279223442078
+      },
+      {
+        "test_index": 1232,
+        "true_digit": 9,
+        "predicted_digit": 4,
+        "confidence": 0.7518791556358337
+      },
+      {
+        "test_index": 1247,
+        "true_digit": 9,
+        "predicted_digit": 5,
+        "confidence": 0.8122124075889587
+      },
+      {
+        "test_index": 1299,
+        "true_digit": 5,
+        "predicted_digit": 3,
+        "confidence": 0.8277798295021057
+      },
+      {
+        "test_index": 1319,
+        "true_digit": 8,
+        "predicted_digit": 0,
+        "confidence": 0.8330387473106384
+      },
+      {
+        "test_index": 1326,
+        "true_digit": 7,
+        "predicted_digit": 2,
+        "confidence": 0.8309211730957031
+      },
+      {
+        "test_index": 1364,
+        "true_digit": 8,
+        "predicted_digit": 2,
+        "confidence": 0.49329936504364014
+      },
+      {
+        "test_index": 1393,
+        "true_digit": 5,
+        "predicted_digit": 3,
+        "confidence": 0.9794898629188538
+      },
+      {
+        "test_index": 1403,
+        "true_digit": 1,
+        "predicted_digit": 6,
+        "confidence": 0.5668970942497253
+      },
+      {
+        "test_index": 1415,
+        "true_digit": 8,
+        "predicted_digit": 6,
+        "confidence": 0.41714203357696533
+      },
+      {
+        "test_index": 1523,
+        "true_digit": 8,
+        "predicted_digit": 6,
+        "confidence": 0.537832498550415
+      },
+      {
+        "test_index": 1527,
+        "true_digit": 1,
+        "predicted_digit": 5,
+        "confidence": 0.556148111820221
+      },
+      {
+        "test_index": 1530,
+        "true_digit": 8,
+        "predicted_digit": 7,
+        "confidence": 0.7931257486343384
+      },
+      {
+        "test_index": 1553,
+        "true_digit": 9,
+        "predicted_digit": 3,
+        "confidence": 0.5799854397773743
+      },
+      {
+        "test_index": 1621,
+        "true_digit": 0,
+        "predicted_digit": 6,
+        "confidence": 0.8791038990020752
+      },
+      {
+        "test_index": 1709,
+        "true_digit": 9,
+        "predicted_digit": 5,
+        "confidence": 0.49218839406967163
+      },
+      {
+        "test_index": 1717,
+        "true_digit": 8,
+        "predicted_digit": 0,
+        "confidence": 0.7247851490974426
+      },
+      {
+        "test_index": 1722,
+        "true_digit": 2,
+        "predicted_digit": 7,
+        "confidence": 0.6713902950286865
+      },
+      {
+        "test_index": 1737,
+        "true_digit": 5,
+        "predicted_digit": 3,
+        "confidence": 0.8907848000526428
+      },
+      {
+        "test_index": 1740,
+        "true_digit": 8,
+        "predicted_digit": 5,
+        "confidence": 0.728543758392334
+      },
+      {
+        "test_index": 1754,
+        "true_digit": 7,
+        "predicted_digit": 2,
+        "confidence": 0.4953922629356384
+      },
+      {
+        "test_index": 1813,
+        "true_digit": 8,
+        "predicted_digit": 5,
+        "confidence": 0.4965856075286865
+      },
+      {
+        "test_index": 1878,
+        "true_digit": 8,
+        "predicted_digit": 3,
+        "confidence": 0.9569094777107239
+      },
+      {
+        "test_index": 1901,
+        "true_digit": 9,
+        "predicted_digit": 4,
+        "confidence": 0.9743446707725525
+      },
+      {
+        "test_index": 1955,
+        "true_digit": 8,
+        "predicted_digit": 2,
+        "confidence": 0.6870179772377014
+      },
+      {
+        "test_index": 2018,
+        "true_digit": 1,
+        "predicted_digit": 3,
+        "confidence": 0.32571282982826233
+      },
+      {
+        "test_index": 2043,
+        "true_digit": 4,
+        "predicted_digit": 8,
+        "confidence": 0.9875553250312805
+      },
+      {
+        "test_index": 2053,
+        "true_digit": 4,
+        "predicted_digit": 9,
+        "confidence": 0.7078660726547241
+      },
+      {
+        "test_index": 2090,
+        "true_digit": 4,
+        "predicted_digit": 1,
+        "confidence": 0.8531562685966492
+      },
+      {
+        "test_index": 2107,
+        "true_digit": 8,
+        "predicted_digit": 0,
+        "confidence": 0.9426996111869812
+      },
+      {
+        "test_index": 2130,
+        "true_digit": 4,
+        "predicted_digit": 9,
+        "confidence": 0.6631332635879517
+      },
+      {
+        "test_index": 2182,
+        "true_digit": 1,
+        "predicted_digit": 3,
+        "confidence": 0.8751433491706848
+      },
+      {
+        "test_index": 2186,
+        "true_digit": 2,
+        "predicted_digit": 3,
+        "confidence": 0.8745515942573547
+      },
+      {
+        "test_index": 2195,
+        "true_digit": 7,
+        "predicted_digit": 2,
+        "confidence": 0.5879068970680237
+      },
+      {
+        "test_index": 2272,
+        "true_digit": 8,
+        "predicted_digit": 0,
+        "confidence": 0.7701781392097473
+      },
+      {
+        "test_index": 2280,
+        "true_digit": 3,
+        "predicted_digit": 5,
+        "confidence": 0.7384858727455139
+      },
+      {
+        "test_index": 2293,
+        "true_digit": 9,
+        "predicted_digit": 4,
+        "confidence": 0.7940426468849182
+      },
+      {
+        "test_index": 2386,
+        "true_digit": 4,
+        "predicted_digit": 7,
+        "confidence": 0.7921394109725952
+      },
+      {
+        "test_index": 2387,
+        "true_digit": 9,
+        "predicted_digit": 1,
+        "confidence": 0.8156066536903381
+      },
+      {
+        "test_index": 2422,
+        "true_digit": 6,
+        "predicted_digit": 4,
+        "confidence": 0.7635003924369812
+      },
+      {
+        "test_index": 2454,
+        "true_digit": 6,
+        "predicted_digit": 5,
+        "confidence": 0.49859899282455444
+      },
+      {
+        "test_index": 2455,
+        "true_digit": 0,
+        "predicted_digit": 6,
+        "confidence": 0.705457866191864
+      },
+      {
+        "test_index": 2462,
+        "true_digit": 2,
+        "predicted_digit": 0,
+        "confidence": 0.9322367310523987
+      },
+      {
+        "test_index": 2488,
+        "true_digit": 2,
+        "predicted_digit": 4,
+        "confidence": 0.542931079864502
+      },
+      {
+        "test_index": 2597,
+        "true_digit": 5,
+        "predicted_digit": 3,
+        "confidence": 0.9919630289077759
+      },
+      {
+        "test_index": 2636,
+        "true_digit": 8,
+        "predicted_digit": 0,
+        "confidence": 0.8881614208221436
+      },
+      {
+        "test_index": 2654,
+        "true_digit": 6,
+        "predicted_digit": 1,
+        "confidence": 0.5613245368003845
+      },
+      {
+        "test_index": 2720,
+        "true_digit": 9,
+        "predicted_digit": 8,
+        "confidence": 0.4950609505176544
+      },
+      {
+        "test_index": 2734,
+        "true_digit": 1,
+        "predicted_digit": 6,
+        "confidence": 0.9903996586799622
+      },
+      {
+        "test_index": 2753,
+        "true_digit": 1,
+        "predicted_digit": 6,
+        "confidence": 0.6444346308708191
+      },
+      {
+        "test_index": 2758,
+        "true_digit": 8,
+        "predicted_digit": 0,
+        "confidence": 0.9411429762840271
+      },
+      {
+        "test_index": 2780,
+        "true_digit": 2,
+        "predicted_digit": 3,
+        "confidence": 0.9432414174079895
+      },
+      {
+        "test_index": 2810,
+        "true_digit": 5,
+        "predicted_digit": 3,
+        "confidence": 0.7353031039237976
+      },
+      {
+        "test_index": 2834,
+        "true_digit": 8,
+        "predicted_digit": 6,
+        "confidence": 0.4854534864425659
+      },
+      {
+        "test_index": 2896,
+        "true_digit": 8,
+        "predicted_digit": 0,
+        "confidence": 0.9993047714233398
+      },
+      {
+        "test_index": 2927,
+        "true_digit": 3,
+        "predicted_digit": 7,
+        "confidence": 0.7960917949676514
+      },
+      {
+        "test_index": 2939,
+        "true_digit": 9,
+        "predicted_digit": 5,
+        "confidence": 0.7365257740020752
+      },
+      {
+        "test_index": 2959,
+        "true_digit": 2,
+        "predicted_digit": 7,
+        "confidence": 0.44023242592811584
+      },
+      {
+        "test_index": 2995,
+        "true_digit": 6,
+        "predicted_digit": 5,
+        "confidence": 0.4950735867023468
+      },
+      {
+        "test_index": 3023,
+        "true_digit": 8,
+        "predicted_digit": 6,
+        "confidence": 0.4182615578174591
+      },
+      {
+        "test_index": 3030,
+        "true_digit": 6,
+        "predicted_digit": 0,
+        "confidence": 0.5558304190635681
+      },
+      {
+        "test_index": 3060,
+        "true_digit": 9,
+        "predicted_digit": 2,
+        "confidence": 0.3708643317222595
+      },
+      {
+        "test_index": 3073,
+        "true_digit": 1,
+        "predicted_digit": 2,
+        "confidence": 0.9666538834571838
+      },
+      {
+        "test_index": 3250,
+        "true_digit": 2,
+        "predicted_digit": 6,
+        "confidence": 0.700936496257782
+      },
+      {
+        "test_index": 3330,
+        "true_digit": 2,
+        "predicted_digit": 3,
+        "confidence": 0.8466935753822327
+      },
+      {
+        "test_index": 3369,
+        "true_digit": 9,
+        "predicted_digit": 8,
+        "confidence": 0.6330243349075317
+      },
+      {
+        "test_index": 3422,
+        "true_digit": 6,
+        "predicted_digit": 0,
+        "confidence": 0.561966598033905
+      },
+      {
+        "test_index": 3503,
+        "true_digit": 9,
+        "predicted_digit": 1,
+        "confidence": 0.44931545853614807
+      },
+      {
+        "test_index": 3520,
+        "true_digit": 6,
+        "predicted_digit": 4,
+        "confidence": 0.8236013650894165
+      },
+      {
+        "test_index": 3534,
+        "true_digit": 4,
+        "predicted_digit": 8,
+        "confidence": 0.9889608025550842
+      },
+      {
+        "test_index": 3540,
+        "true_digit": 0,
+        "predicted_digit": 9,
+        "confidence": 0.9083429574966431
+      },
+      {
+        "test_index": 3558,
+        "true_digit": 5,
+        "predicted_digit": 0,
+        "confidence": 0.8910772204399109
+      },
+      {
+        "test_index": 3559,
+        "true_digit": 8,
+        "predicted_digit": 0,
+        "confidence": 0.970578134059906
+      },
+      {
+        "test_index": 3597,
+        "true_digit": 9,
+        "predicted_digit": 3,
+        "confidence": 0.5644269585609436
+      },
+      {
+        "test_index": 3626,
+        "true_digit": 8,
+        "predicted_digit": 3,
+        "confidence": 0.7888778448104858
+      },
+      {
+        "test_index": 3629,
+        "true_digit": 8,
+        "predicted_digit": 3,
+        "confidence": 0.3598029911518097
+      },
+      {
+        "test_index": 3635,
+        "true_digit": 8,
+        "predicted_digit": 6,
+        "confidence": 0.6732182502746582
+      },
+      {
+        "test_index": 3726,
+        "true_digit": 4,
+        "predicted_digit": 9,
+        "confidence": 0.8444936275482178
+      },
+      {
+        "test_index": 3727,
+        "true_digit": 8,
+        "predicted_digit": 3,
+        "confidence": 0.6006163358688354
+      },
+      {
+        "test_index": 3751,
+        "true_digit": 7,
+        "predicted_digit": 2,
+        "confidence": 0.6086456775665283
+      },
+      {
+        "test_index": 3767,
+        "true_digit": 7,
+        "predicted_digit": 2,
+        "confidence": 0.48875007033348083
+      },
+      {
+        "test_index": 3808,
+        "true_digit": 7,
+        "predicted_digit": 8,
+        "confidence": 0.8790380358695984
+      },
+      {
+        "test_index": 3811,
+        "true_digit": 2,
+        "predicted_digit": 3,
+        "confidence": 0.7424766421318054
+      },
+      {
+        "test_index": 3850,
+        "true_digit": 9,
+        "predicted_digit": 4,
+        "confidence": 0.8602232336997986
+      },
+      {
+        "test_index": 3869,
+        "true_digit": 9,
+        "predicted_digit": 4,
+        "confidence": 0.6956778168678284
+      },
+      {
+        "test_index": 3871,
+        "true_digit": 8,
+        "predicted_digit": 3,
+        "confidence": 0.4639313519001007
+      },
+      {
+        "test_index": 3943,
+        "true_digit": 3,
+        "predicted_digit": 5,
+        "confidence": 0.5750340223312378
+      },
+      {
+        "test_index": 3985,
+        "true_digit": 9,
+        "predicted_digit": 4,
+        "confidence": 0.6860626935958862
+      },
+      {
+        "test_index": 4065,
+        "true_digit": 0,
+        "predicted_digit": 2,
+        "confidence": 0.5549887418746948
+      },
+      {
+        "test_index": 4075,
+        "true_digit": 8,
+        "predicted_digit": 0,
+        "confidence": 0.4963330328464508
+      },
+      {
+        "test_index": 4100,
+        "true_digit": 2,
+        "predicted_digit": 3,
+        "confidence": 0.9070844054222107
+      },
+      {
+        "test_index": 4116,
+        "true_digit": 8,
+        "predicted_digit": 6,
+        "confidence": 0.8664637207984924
+      },
+      {
+        "test_index": 4176,
+        "true_digit": 2,
+        "predicted_digit": 7,
+        "confidence": 0.9896794557571411
+      },
+      {
+        "test_index": 4224,
+        "true_digit": 9,
+        "predicted_digit": 7,
+        "confidence": 0.9189662337303162
+      },
+      {
+        "test_index": 4238,
+        "true_digit": 7,
+        "predicted_digit": 3,
+        "confidence": 0.7040553092956543
+      },
+      {
+        "test_index": 4265,
+        "true_digit": 4,
+        "predicted_digit": 3,
+        "confidence": 0.5720202326774597
+      },
+      {
+        "test_index": 4294,
+        "true_digit": 9,
+        "predicted_digit": 7,
+        "confidence": 0.9308789372444153
+      },
+      {
+        "test_index": 4308,
+        "true_digit": 1,
+        "predicted_digit": 6,
+        "confidence": 0.75593501329422
+      },
+      {
+        "test_index": 4313,
+        "true_digit": 4,
+        "predicted_digit": 7,
+        "confidence": 0.6238523125648499
+      },
+      {
+        "test_index": 4344,
+        "true_digit": 9,
+        "predicted_digit": 2,
+        "confidence": 0.39802855253219604
+      },
+      {
+        "test_index": 4497,
+        "true_digit": 8,
+        "predicted_digit": 7,
+        "confidence": 0.4594208598136902
+      },
+      {
+        "test_index": 4500,
+        "true_digit": 9,
+        "predicted_digit": 1,
+        "confidence": 0.8190670013427734
+      },
+      {
+        "test_index": 4536,
+        "true_digit": 6,
+        "predicted_digit": 5,
+        "confidence": 0.7170834541320801
+      },
+      {
+        "test_index": 4548,
+        "true_digit": 5,
+        "predicted_digit": 6,
+        "confidence": 0.5247780084609985
+      },
+      {
+        "test_index": 4615,
+        "true_digit": 2,
+        "predicted_digit": 4,
+        "confidence": 0.9674221873283386
+      },
+      {
+        "test_index": 4671,
+        "true_digit": 8,
+        "predicted_digit": 3,
+        "confidence": 0.848849892616272
+      },
+      {
+        "test_index": 4731,
+        "true_digit": 8,
+        "predicted_digit": 3,
+        "confidence": 0.3636433482170105
+      },
+      {
+        "test_index": 4740,
+        "true_digit": 3,
+        "predicted_digit": 5,
+        "confidence": 0.9481053948402405
+      },
+      {
+        "test_index": 4743,
+        "true_digit": 8,
+        "predicted_digit": 3,
+        "confidence": 0.5026130080223083
+      },
+      {
+        "test_index": 4761,
+        "true_digit": 9,
+        "predicted_digit": 8,
+        "confidence": 0.9853164553642273
+      },
+      {
+        "test_index": 4807,
+        "true_digit": 8,
+        "predicted_digit": 0,
+        "confidence": 0.6403194665908813
+      },
+      {
+        "test_index": 4823,
+        "true_digit": 9,
+        "predicted_digit": 4,
+        "confidence": 0.9725756645202637
+      },
+      {
+        "test_index": 4860,
+        "true_digit": 4,
+        "predicted_digit": 9,
+        "confidence": 0.5076655149459839
+      },
+      {
+        "test_index": 4879,
+        "true_digit": 8,
+        "predicted_digit": 6,
+        "confidence": 0.9798611402511597
+      },
+      {
+        "test_index": 4890,
+        "true_digit": 8,
+        "predicted_digit": 6,
+        "confidence": 0.463714063167572
+      },
+      {
+        "test_index": 4956,
+        "true_digit": 8,
+        "predicted_digit": 4,
+        "confidence": 0.7294170260429382
+      },
+      {
+        "test_index": 4997,
+        "true_digit": 2,
+        "predicted_digit": 3,
+        "confidence": 0.889142632484436
+      },
+      {
+        "test_index": 5251,
+        "true_digit": 0,
+        "predicted_digit": 9,
+        "confidence": 0.8693927526473999
+      },
+      {
+        "test_index": 5299,
+        "true_digit": 9,
+        "predicted_digit": 7,
+        "confidence": 0.5156458020210266
+      },
+      {
+        "test_index": 5634,
+        "true_digit": 2,
+        "predicted_digit": 3,
+        "confidence": 0.9829460382461548
+      },
+      {
+        "test_index": 5654,
+        "true_digit": 7,
+        "predicted_digit": 2,
+        "confidence": 0.8334404230117798
+      },
+      {
+        "test_index": 5676,
+        "true_digit": 4,
+        "predicted_digit": 7,
+        "confidence": 0.6943483948707581
+      },
+      {
+        "test_index": 5803,
+        "true_digit": 8,
+        "predicted_digit": 5,
+        "confidence": 0.8626623153686523
+      },
+      {
+        "test_index": 5937,
+        "true_digit": 5,
+        "predicted_digit": 3,
+        "confidence": 0.7382518649101257
+      },
+      {
+        "test_index": 5982,
+        "true_digit": 5,
+        "predicted_digit": 3,
+        "confidence": 0.5355581045150757
+      },
+      {
+        "test_index": 6071,
+        "true_digit": 9,
+        "predicted_digit": 3,
+        "confidence": 0.6673815250396729
+      },
+      {
+        "test_index": 6091,
+        "true_digit": 9,
+        "predicted_digit": 5,
+        "confidence": 0.5213282108306885
+      },
+      {
+        "test_index": 6400,
+        "true_digit": 0,
+        "predicted_digit": 4,
+        "confidence": 0.944318950176239
+      },
+      {
+        "test_index": 6418,
+        "true_digit": 2,
+        "predicted_digit": 7,
+        "confidence": 0.5798406004905701
+      },
+      {
+        "test_index": 6571,
+        "true_digit": 9,
+        "predicted_digit": 7,
+        "confidence": 0.48396557569503784
+      },
+      {
+        "test_index": 6576,
+        "true_digit": 7,
+        "predicted_digit": 1,
+        "confidence": 0.935910701751709
+      },
+      {
+        "test_index": 6578,
+        "true_digit": 8,
+        "predicted_digit": 5,
+        "confidence": 0.6796011924743652
+      },
+      {
+        "test_index": 6597,
+        "true_digit": 0,
+        "predicted_digit": 3,
+        "confidence": 0.5011717081069946
+      },
+      {
+        "test_index": 6625,
+        "true_digit": 8,
+        "predicted_digit": 2,
+        "confidence": 0.3881312310695648
+      },
+      {
+        "test_index": 6721,
+        "true_digit": 2,
+        "predicted_digit": 7,
+        "confidence": 0.5989422798156738
+      },
+      {
+        "test_index": 6744,
+        "true_digit": 2,
+        "predicted_digit": 7,
+        "confidence": 0.8877535462379456
+      },
+      {
+        "test_index": 6783,
+        "true_digit": 1,
+        "predicted_digit": 6,
+        "confidence": 0.9987357258796692
+      },
+      {
+        "test_index": 6785,
+        "true_digit": 2,
+        "predicted_digit": 7,
+        "confidence": 0.8567169904708862
+      },
+      {
+        "test_index": 6796,
+        "true_digit": 2,
+        "predicted_digit": 7,
+        "confidence": 0.7409680485725403
+      },
+      {
+        "test_index": 6847,
+        "true_digit": 6,
+        "predicted_digit": 4,
+        "confidence": 0.6764838695526123
+      },
+      {
+        "test_index": 7212,
+        "true_digit": 2,
+        "predicted_digit": 7,
+        "confidence": 0.9289569854736328
+      },
+      {
+        "test_index": 7259,
+        "true_digit": 8,
+        "predicted_digit": 3,
+        "confidence": 0.5781163573265076
+      },
+      {
+        "test_index": 7434,
+        "true_digit": 4,
+        "predicted_digit": 8,
+        "confidence": 0.5189884901046753
+      },
+      {
+        "test_index": 7736,
+        "true_digit": 9,
+        "predicted_digit": 8,
+        "confidence": 0.41023707389831543
+      },
+      {
+        "test_index": 7899,
+        "true_digit": 1,
+        "predicted_digit": 0,
+        "confidence": 0.4143538177013397
+      },
+      {
+        "test_index": 7928,
+        "true_digit": 1,
+        "predicted_digit": 0,
+        "confidence": 0.5936285853385925
+      },
+      {
+        "test_index": 7978,
+        "true_digit": 7,
+        "predicted_digit": 2,
+        "confidence": 0.5223652124404907
+      },
+      {
+        "test_index": 7991,
+        "true_digit": 9,
+        "predicted_digit": 8,
+        "confidence": 0.5306627154350281
+      },
+      {
+        "test_index": 8059,
+        "true_digit": 2,
+        "predicted_digit": 1,
+        "confidence": 0.5092315077781677
+      },
+      {
+        "test_index": 8094,
+        "true_digit": 2,
+        "predicted_digit": 8,
+        "confidence": 0.7919844388961792
+      },
+      {
+        "test_index": 8160,
+        "true_digit": 5,
+        "predicted_digit": 9,
+        "confidence": 0.3886599540710449
+      },
+      {
+        "test_index": 8198,
+        "true_digit": 2,
+        "predicted_digit": 7,
+        "confidence": 0.4773876368999481
+      },
+      {
+        "test_index": 8316,
+        "true_digit": 7,
+        "predicted_digit": 2,
+        "confidence": 0.8652760982513428
+      },
+      {
+        "test_index": 8325,
+        "true_digit": 0,
+        "predicted_digit": 6,
+        "confidence": 0.9005778431892395
+      },
+      {
+        "test_index": 8332,
+        "true_digit": 9,
+        "predicted_digit": 7,
+        "confidence": 0.8222334384918213
+      },
+      {
+        "test_index": 8408,
+        "true_digit": 8,
+        "predicted_digit": 5,
+        "confidence": 0.9676878452301025
+      },
+      {
+        "test_index": 8522,
+        "true_digit": 8,
+        "predicted_digit": 6,
+        "confidence": 0.8436350226402283
+      },
+      {
+        "test_index": 8653,
+        "true_digit": 5,
+        "predicted_digit": 3,
+        "confidence": 0.7351702451705933
+      },
+      {
+        "test_index": 9009,
+        "true_digit": 7,
+        "predicted_digit": 2,
+        "confidence": 0.8856866955757141
+      },
+      {
+        "test_index": 9010,
+        "true_digit": 2,
+        "predicted_digit": 3,
+        "confidence": 0.7382347583770752
+      },
+      {
+        "test_index": 9015,
+        "true_digit": 7,
+        "predicted_digit": 2,
+        "confidence": 0.603314995765686
+      },
+      {
+        "test_index": 9375,
+        "true_digit": 8,
+        "predicted_digit": 5,
+        "confidence": 0.6887825727462769
+      },
+      {
+        "test_index": 9446,
+        "true_digit": 2,
+        "predicted_digit": 3,
+        "confidence": 0.48342517018318176
+      },
+      {
+        "test_index": 9450,
+        "true_digit": 8,
+        "predicted_digit": 6,
+        "confidence": 0.5522607564926147
+      },
+      {
+        "test_index": 9505,
+        "true_digit": 7,
+        "predicted_digit": 2,
+        "confidence": 0.8510607481002808
+      },
+      {
+        "test_index": 9530,
+        "true_digit": 9,
+        "predicted_digit": 8,
+        "confidence": 0.9982616305351257
+      },
+      {
+        "test_index": 9638,
+        "true_digit": 9,
+        "predicted_digit": 7,
+        "confidence": 0.9363527297973633
+      },
+      {
+        "test_index": 9642,
+        "true_digit": 9,
+        "predicted_digit": 7,
+        "confidence": 0.9775476455688477
+      },
+      {
+        "test_index": 9664,
+        "true_digit": 2,
+        "predicted_digit": 7,
+        "confidence": 0.9306250810623169
+      },
+      {
+        "test_index": 9669,
+        "true_digit": 4,
+        "predicted_digit": 7,
+        "confidence": 0.8007246851921082
+      },
+      {
+        "test_index": 9692,
+        "true_digit": 9,
+        "predicted_digit": 7,
+        "confidence": 0.8341857194900513
+      },
+      {
+        "test_index": 9700,
+        "true_digit": 2,
+        "predicted_digit": 7,
+        "confidence": 0.49354472756385803
+      },
+      {
+        "test_index": 9729,
+        "true_digit": 5,
+        "predicted_digit": 6,
+        "confidence": 0.9729886651039124
+      },
+      {
+        "test_index": 9733,
+        "true_digit": 9,
+        "predicted_digit": 8,
+        "confidence": 0.4930223822593689
+      },
+      {
+        "test_index": 9749,
+        "true_digit": 5,
+        "predicted_digit": 6,
+        "confidence": 0.745903730392456
+      },
+      {
+        "test_index": 9770,
+        "true_digit": 5,
+        "predicted_digit": 0,
+        "confidence": 0.8539330363273621
+      }
+    ],
+    "preprocessing_seconds": 0.682,
+    "inference_device": "cpu"
+  },
+  "browser_preprocessor_sha256": "8a62b90f059ce8f6f49267fe5dd0f7fdbcc2633d69d806a33e376496f4d98297",
+  "node_version": "v24.15.0"
+}

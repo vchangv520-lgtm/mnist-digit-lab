@@ -1,0 +1,4 @@
+# 仅导出/验证网页版模型时需要；先安装 requirements.txt。
+onnx==1.23.2
+onnxruntime==1.32.0
+onnxscript==0.7.2

@@ -1,0 +1,11 @@
+{
+  "evaluated_at": "2026-11-17T02:35:22.894434+11:00",
+  "model_architecture": "Linear",
+  "weights_sha256": "afd3ebb3af1b97821b533caf9e5f85ae5a78e7d8b78a5d414b1b26a53b7e2fd9",
+  "test_correct": 9084,
+  "test_size": 10000,
+  "test_accuracy": 0.9084,
+  "evaluation_device": "cpu",
+  "parameter_count": 7850,
+  "input_transform": "ToTensor (0..1); no additional normalization"
+}

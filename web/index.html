@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f3ed">
+  <title>第一笔 · 手写数字实验室</title>
+  <style>
+    :root{--paper:#f5f3ed;--surface:#fffefa;--ink:#202c37;--muted:#727b81;--line:#dfdfd7;--blue:#3659d9;--blue-light:#edf0ff;--green:#377961;--radius:22px}
+    *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB",sans-serif;-webkit-font-smoothing:antialiased}button,input{font:inherit}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.45}button:focus-visible,a:focus-visible,canvas:focus-visible{outline:3px solid #8aa0ff;outline-offset:4px}a{color:var(--blue)}.shell{max-width:1120px;padding:0 40px;margin:auto}.topbar{height:86px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:16px}.brand{font-size:13px;letter-spacing:1.7px;font-weight:700;display:flex;align-items:center;gap:11px}.brand-icon{display:grid;grid-template-columns:repeat(3,4px);gap:3px;transform:rotate(-7deg)}.brand-icon i{width:4px;height:4px;background:var(--blue);border-radius:1px}.brand-icon i:nth-child(3n){opacity:.35}.project-number{font-family:ui-monospace,SFMono-Regular,monospace;color:var(--muted);font-size:11px;letter-spacing:1px}.hero{padding:46px 0 32px;display:flex;justify-content:space-between;align-items:end;gap:32px}.eyebrow{font-size:12px;letter-spacing:2px;color:var(--blue);font-weight:600;margin:0 0 14px}.hero h1{margin:0;font-size:40px;letter-spacing:-1.8px;font-weight:650;line-height:1.3}.hero h1 span{font-family:Georgia,serif;color:var(--blue);font-style:italic}.intro{font-size:14px;color:var(--muted);line-height:1.9;max-width:390px;margin:16px 0 0}.status-panel{text-align:right;flex-shrink:0;padding-bottom:3px}.status{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:30px;padding:8px 12px;font-size:11px;background:#ffffff80}.status-dot{width:6px;height:6px;border-radius:50%;background:#aaa898}.status[data-state="ready"] .status-dot{background:var(--green);box-shadow:0 0 0 3px #37796113}.status[data-state="error"] .status-dot{background:#b66e4e}.device{color:var(--muted);font-size:11px;margin:10px 0 0;font-family:ui-monospace,SFMono-Regular,monospace}.workspace{display:grid;grid-template-columns:1.04fr 1fr;gap:20px;align-items:stretch}.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:25px 28px}.card-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;gap:10px}.section-heading{font-size:15px;font-weight:650;margin:0;display:flex;align-items:center;gap:10px}.step-num{font:10px ui-monospace,SFMono-Regular,monospace;color:var(--muted);border:1px solid var(--line);border-radius:50%;width:24px;height:24px;display:inline-flex;align-items:center;justify-content:center}.head-note{font-size:10px;color:var(--muted);letter-spacing:.5px}.draw-shell{position:relative;display:block;width:280px;max-width:100%;aspect-ratio:1;margin:0 auto;border:1px solid #dadfdc;border-radius:12px;overflow:hidden;box-shadow:0 4px 18px #23313e04;background:#fff}.draw-shell:after{content:"";position:absolute;inset:20px;border:1px dashed #e6e9e6;border-radius:4px;pointer-events:none}.draw-shell.has-ink:after{opacity:0}canvas{display:block;width:100%;height:100%;touch-action:none;cursor:crosshair}.placeholder{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:14px;pointer-events:none;color:#a0a7ac}.placeholder svg{opacity:.65}.placeholder p{font-size:12px;margin:0}.draw-shell.has-ink .placeholder{display:none}.draw-hint{margin:13px 0 18px;text-align:center;font-size:11px;color:var(--muted)}.action-row{display:flex;gap:10px}.btn{border:1px solid var(--line);border-radius:10px;padding:13px 16px;background:transparent;color:var(--ink);font-size:13px;font-weight:550;transition:background .15s,transform .15s}.btn:hover:not(:disabled){background:#f0eee7}.btn:active:not(:disabled){transform:translateY(1px)}.btn-primary{flex:1;background:var(--blue);color:white;border-color:var(--blue);display:flex;align-items:center;justify-content:center;gap:12px;box-shadow:0 3px 7px #3659d914}.btn-primary:hover:not(:disabled){background:#2b49bd}.upload-row{margin-top:15px;text-align:center;font-size:11px;color:var(--muted)}.link-button{border:none;background:none;padding:3px 4px;color:var(--blue);font-size:11px;text-decoration:underline;text-underline-offset:3px}.hidden-input{display:none}.message{font-size:12px;color:var(--muted);line-height:1.6;min-height:20px;margin:10px 0 0;text-align:center}.message.error{color:#a44e36}.result-card{display:flex;flex-direction:column}.result-top{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:1px 3px 17px;border-bottom:1px solid var(--line)}.guess-block{display:flex;align-items:center;gap:20px}.guess{font:400 92px/.95 Georgia,"Times New Roman",serif;letter-spacing:-6px;min-width:58px;color:var(--blue)}.guess-label{font-size:11px;color:var(--muted);margin:0 0 8px}.confidence{font-size:20px;letter-spacing:-.5px;font-weight:600;margin:0}.confidence-label{font-size:10px;color:var(--muted);margin:5px 0 0}.pixel-preview{text-align:center;flex-shrink:0}.pixel-preview img,.pixel-empty{display:block;width:56px;height:56px;image-rendering:pixelated;border-radius:5px;border:1px solid #e2e4e0;background:#eef0ec;object-fit:contain}.pixel-empty{display:flex;align-items:center;justify-content:center;font:12px ui-monospace,monospace;color:#a0a7ac}.pixel-preview p{font-size:9px;color:var(--muted);margin:7px 0 0}.prob-heading{font-size:11px;color:var(--muted);font-weight:500;margin:18px 0 12px;display:flex;justify-content:space-between;align-items:center}.prob-heading span{font-size:9px;letter-spacing:.5px}.prob-list{display:flex;flex-direction:column;gap:9px}.prob-row{display:grid;grid-template-columns:16px 1fr 45px;align-items:center;gap:11px;font:11px ui-monospace,SFMono-Regular,monospace;color:var(--muted)}.prob-row.winner{color:var(--blue);font-weight:700}.prob-track{height:6px;border-radius:3px;background:#efefe9;overflow:hidden}.prob-fill{height:100%;width:0;background:#bbc7e9;border-radius:3px;transition:width .4s ease}.winner .prob-fill{background:var(--blue)}.prob-value{text-align:right;font-size:10px}.result-footnote{font-size:10px;line-height:1.7;color:var(--muted);margin:17px 0 0}.training-summary{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:20px 0 34px;padding:16px 20px;background:#ebece5;border-radius:12px;font-size:11px}.summary-title{display:flex;gap:9px;align-items:center;color:#58625d}.summary-title svg{flex-shrink:0}.summary-stat{color:#536059;line-height:1.6;text-align:right}.summary-stat strong{font-family:ui-monospace,SFMono-Regular,monospace;font-weight:650;color:var(--ink)}.learn-label{margin:0 0 18px;color:var(--muted);font-size:10px;letter-spacing:1.5px}.learning{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-bottom:35px}.learning-item{position:relative;padding-top:15px;border-top:1px solid var(--line)}.learning-item:before{content:"";position:absolute;left:0;top:-2px;width:4px;height:4px;border-radius:50%;background:#adb4aa}.learning-item h3{font-size:13px;font-weight:600;margin:0 0 8px}.learning-item h3 span{font:10px ui-monospace,monospace;color:var(--muted);margin-right:9px}.learning-item p{font-size:11px;color:var(--muted);line-height:1.8;margin:0}.footer{border-top:1px solid var(--line);padding:18px 0 26px;display:flex;justify-content:space-between;gap:15px;color:#8b928f;font-size:10px;letter-spacing:.4px}.footer span:last-child{font-family:ui-monospace,SFMono-Regular,monospace}[hidden]{display:none!important}
+    @media(max-width:800px){.shell{padding:0 24px}.hero h1{font-size:34px}.hero{gap:18px}.card{padding:22px}.workspace{gap:14px}.guess{font-size:80px}.guess-block{gap:12px}.confidence{font-size:18px}.pixel-preview img,.pixel-empty{width:42px;height:42px}.head-note{font-size:9px}}
+    .model-identity{margin:12px 0 0;font-size:11px;color:var(--blue);line-height:1.8;overflow-wrap:anywhere}.model-identity code{font:10px ui-monospace,SFMono-Regular,monospace}.summary-title{line-height:1.7}.message{overflow-wrap:anywhere}
+    @media(max-width:720px){.shell{padding:0 18px}.topbar{height:67px}.brand{font-size:10px;letter-spacing:1px}.project-number{font-size:9px}.hero{padding:30px 0 24px;display:block}.hero h1{font-size:34px}.intro{font-size:12px;margin-top:12px}.status-panel{display:flex;align-items:center;justify-content:space-between;text-align:left;margin-top:19px;gap:12px}.device{margin:0;font-size:10px}.workspace{grid-template-columns:1fr;gap:16px}.card{padding:22px}.result-top{padding:5px 0 22px}.guess{font-size:90px}.pixel-preview img,.pixel-empty{width:56px;height:56px}.prob-list{gap:12px}.training-summary{margin-bottom:26px;align-items:start;padding:14px;font-size:10px;flex-direction:column;gap:8px}.summary-stat{text-align:left}.learning{grid-template-columns:1fr;gap:20px}.learning-item p{font-size:12px}.footer{font-size:9px}.btn{padding:14px 17px}}
+    @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-icon" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>JOURNEY TO THE LLM</div>
+      <span class="project-number">PROJECT / 001</span>
+    </header>
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <div><p class="eyebrow">手写数字实验室</p><h1 id="page-title">第一笔，让机器认识 <span>0–9</span>。</h1><p class="intro">从一张图片，到一个答案。写下一个数字，看看你亲手训练的 model 学到了什么。</p><p class="model-identity" id="model-identity">Model 未载入</p></div>
+        <div class="status-panel"><div class="status" id="status" data-state="loading"><span class="status-dot" aria-hidden="true"></span><span id="status-text">正在连接 model</span></div><p class="device" id="device">PyTorch · 本地运行</p></div>
+      </section>
+      <div class="workspace">
+        <section class="card input-card" aria-labelledby="input-heading">
+          <div class="card-head"><h2 class="section-heading" id="input-heading"><span class="step-num">01</span>写一个数字</h2><span class="head-note">鼠标 / 触控板 / 触屏</span></div>
+          <div class="draw-shell" id="draw-shell">
+            <canvas id="canvas" width="280" height="280" aria-label="手写数字画布，可使用鼠标或触屏绘制，也可通过下方按钮上传图片" tabindex="0"></canvas>
+            <div class="placeholder" aria-hidden="true"><svg width="43" height="43" viewBox="0 0 43 43" fill="none"><path d="M9 32.5l2.1-8.4L29 6.2a3.4 3.4 0 014.8 0l3 3a3.4 3.4 0 010 4.8L18.9 31.9 10.5 34z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M26 9.3l7.6 7.6M11 24l7.8 7.8M8 38h27" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><p>在这里写下 0～9 中的一个数字</p></div>
+          </div>
+          <p class="draw-hint">尽量写大、写在中间，每次只写一个数字</p>
+          <div class="action-row"><button class="btn" id="clear" type="button">清空</button><button class="btn btn-primary" id="predict" type="button" disabled><span id="predict-label">识别数字</span><span aria-hidden="true">↗</span></button></div>
+          <div class="upload-row">也可以<button class="link-button" id="upload" type="button">上传一张数字图片</button><input class="hidden-input" id="file" type="file" accept="image/png,image/jpeg,image/webp,image/bmp" aria-label="选择数字图片"></div>
+          <p class="message" id="message" role="status" aria-live="polite">Model 连接后，就可以开始识别。</p>
+        </section>
+        <section class="card result-card" aria-labelledby="result-heading" aria-busy="false" id="result-card">
+          <div class="card-head"><h2 class="section-heading" id="result-heading"><span class="step-num">02</span>查看 Prediction</h2><span class="head-note">MODEL OUTPUT</span></div>
+          <div class="result-top" aria-live="polite" aria-atomic="true"><div class="guess-block"><div class="guess" id="guess">—</div><div><p class="guess-label" id="guess-label">等待你的第一笔</p><p class="confidence" id="confidence">—</p><p class="confidence-label">Probability</p></div></div><div class="pixel-preview"><div class="pixel-empty" id="pixel-empty">28²</div><img id="processed" alt="Preprocessing 后实际输入 model 的 28 × 28 grayscale 图片" hidden><p>Preprocessing</p></div></div>
+          <h3 class="prob-heading">每个数字的 Probability<span>0 → 9</span></h3>
+          <div class="prob-list" id="prob-list" aria-label="十个数字的 probability"></div>
+          <p class="result-footnote">Probability 来自 model 的 softmax 输出，不代表一定正确。它也可能把你写的 4 看成 9，试试换一种写法。</p>
+        </section>
+      </div>
+      <div class="training-summary"><div class="summary-title"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="2" y="2" width="12" height="12" rx="3" stroke="currentColor"/><path d="M5 10V8m3 2V5m3 5V7" stroke="currentColor" stroke-linecap="round"/></svg><span id="model-summary">Model · MNIST</span></div><div class="summary-stat" id="training-stat">Test accuracy 未载入</div></div>
+      <section aria-labelledby="learn-heading"><h2 class="learn-label" id="learn-heading">这一次 prediction，经历了什么？</h2><div class="learning"><div class="learning-item"><h3><span>01</span><b id="learn-input-title">Preprocessing</b></h3><p id="learn-input">裁剪笔迹、缩放并居中到 28 × 28，把图片转成 model 能计算的 tensor。</p></div><div class="learning-item"><h3><span>02</span><b id="learn-model-title">Model → scores</b></h3><p id="learn-model">载入你保存的 weights，让 model 给 0～9 分别打分。连接后，这里会显示当前 model 的计算过程。</p></div><div class="learning-item"><h3><span>03</span>softmax → probabilities</h3><p>softmax 把 10 个 logits 转成 probabilities，最高的一项就是 prediction。分数高也可能答错。</p></div></div></section>
+    </main>
+    <footer class="footer"><span>从零开始，理解每一次 prediction。</span><span>BUILT WITH PYTORCH</span></footer>
+  </div>
+  <script>
+    'use strict';
+    const $ = (id) => document.getElementById(id);
+    const canvas = $('canvas');
+    const context = canvas.getContext('2d');
+    const state = {ready:false, busy:false, hasInk:false, drawing:false, revision:0, sourceImage:null, launchCommand:'.venv/bin/python draw.py'};
+    const probabilityRows = Array.from({length:10}, (_, digit) => {
+      const row = document.createElement('div');
+      row.className = 'prob-row';
+      row.innerHTML = `<span>${digit}</span><div class="prob-track"><div class="prob-fill"></div></div><span class="prob-value">—</span>`;
+      $('prob-list').appendChild(row);
+      return row;
+    });
+
+    function message(text, error = false) {
+      $('message').textContent = text;
+      $('message').classList.toggle('error', error);
+    }
+
+    function updateControls() {
+      $('predict').disabled = !state.ready || state.busy || !state.hasInk;
+      $('clear').disabled = state.busy;
+      $('upload').disabled = state.busy;
+      $('predict-label').textContent = state.busy ? '正在识别…' : '识别数字';
+      $('result-card').setAttribute('aria-busy', String(state.busy));
+      canvas.style.pointerEvents = state.busy ? 'none' : 'auto';
+      $('draw-shell').classList.toggle('has-ink', state.hasInk);
+    }
+
+    function resetResult() {
+      $('guess').textContent = '—';
+      $('guess-label').textContent = state.hasInk ? '准备好后，点击识别' : '等待你的第一笔';
+      $('confidence').textContent = '—';
+      $('processed').hidden = true;
+      $('processed').removeAttribute('src');
+      $('pixel-empty').hidden = false;
+      probabilityRows.forEach((row) => {
+        row.classList.remove('winner');
+        row.querySelector('.prob-fill').style.width = '0%';
+        row.querySelector('.prob-value').textContent = '—';
+        row.removeAttribute('aria-label');
+      });
+    }
+
+    function clearCanvas() {
+      context.fillStyle = '#ffffff';
+      context.fillRect(0, 0, canvas.width, canvas.height);
+      state.hasInk = false;
+      state.drawing = false;
+      state.sourceImage = null;
+      state.revision++;
+      resetResult();
+      updateControls();
+      message(state.ready ? '写下一个数字，点击「识别数字」。' : 'Model 连接后，就可以开始识别。');
+    }
+
+    function canvasPoint(event) {
+      const rect = canvas.getBoundingClientRect();
+      return {x:(event.clientX - rect.left) * canvas.width / rect.width, y:(event.clientY - rect.top) * canvas.height / rect.height};
+    }
+
+    canvas.addEventListener('pointerdown', (event) => {
+      if (state.busy || (event.pointerType === 'mouse' && event.button !== 0)) return;
+      event.preventDefault();
+      canvas.setPointerCapture(event.pointerId);
+      const point = canvasPoint(event);
+      state.drawing = true;
+      state.hasInk = true;
+      state.sourceImage = null;
+      state.revision++;
+      context.strokeStyle = '#181e25';
+      context.fillStyle = '#181e25';
+      context.lineWidth = 18;
+      context.lineCap = 'round';
+      context.lineJoin = 'round';
+      context.beginPath();
+      context.arc(point.x, point.y, 9, 0, Math.PI * 2);
+      context.fill();
+      context.beginPath();
+      context.moveTo(point.x, point.y);
+      resetResult();
+      updateControls();
+      message(state.ready ? '写好后，点击「识别数字」。' : '可以先写数字，model 准备好后再识别。');
+    });
+    canvas.addEventListener('pointermove', (event) => {
+      if (!state.drawing) return;
+      event.preventDefault();
+      const point = canvasPoint(event);
+      context.lineTo(point.x, point.y);
+      context.stroke();
+    });
+    ['pointerup','pointercancel','lostpointercapture'].forEach((name) => canvas.addEventListener(name, () => {state.drawing = false;}));
+    $('clear').addEventListener('click', clearCanvas);
+    $('upload').addEventListener('click', () => $('file').click());
+    $('file').addEventListener('change', async (event) => {
+      const file = event.target.files[0];
+      event.target.value = '';
+      if (!file || state.busy) return;
+      if (!/^image\/(png|jpeg|webp|bmp)$/.test(file.type)) {message('请选择 PNG、JPG、WebP 或 BMP 图片。', true);return;}
+      if (file.size > 4 * 1024 * 1024) {message('图片太大，请选择小于 4 MB 的单个数字图片。', true);return;}
+      const image = new Image();
+      const url = URL.createObjectURL(file);
+      const revision = ++state.revision;
+      try {
+        image.src = url;
+        await image.decode();
+        if (revision !== state.revision || state.busy) return;
+        if (image.width * image.height > 16000000) throw new Error('图片尺寸太大，请先缩小到 16 megapixels 以内。');
+        clearCanvas();
+        const scale = Math.min(260 / image.width, 260 / image.height);
+        const width = image.width * scale, height = image.height * scale;
+        context.drawImage(image, (280 - width) / 2, (280 - height) / 2, width, height);
+        // Keep the uploaded image's own border so a dark background is detected correctly.
+        const source = document.createElement('canvas');
+        const sourceScale = Math.min(1, 512 / Math.max(image.width, image.height));
+        source.width = Math.max(1, Math.round(image.width * sourceScale));
+        source.height = Math.max(1, Math.round(image.height * sourceScale));
+        const sourceContext = source.getContext('2d');
+        sourceContext.fillStyle = '#ffffff';
+        sourceContext.fillRect(0, 0, source.width, source.height);
+        sourceContext.drawImage(image, 0, 0, source.width, source.height);
+        state.sourceImage = source.toDataURL('image/png');
+        state.hasInk = true;
+        resetResult();
+        updateControls();
+        message('图片已载入。请确认只包含一个数字，再点击识别。');
+      } catch (error) {message(error.message.includes('megapixels') ? error.message : '无法读取这张图片，请换一张试试。', true);}
+      finally {URL.revokeObjectURL(url);}
+    });
+
+    $('predict').addEventListener('click', async () => {
+      if (!state.ready || state.busy || !state.hasInk) return;
+      state.busy = true;
+      updateControls();
+      message('正在把你的笔迹送入本地 model…');
+      try {
+        const response = await fetch('/api/predict', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({image:state.sourceImage || canvas.toDataURL('image/png')}),signal:AbortSignal.timeout(30000)});
+        const result = await response.json();
+        if (!response.ok) throw new Error(result.error || '识别失败，请稍后重试。');
+        if (!Number.isInteger(result.prediction) || result.prediction < 0 || result.prediction > 9 || !Array.isArray(result.probabilities) || result.probabilities.length !== 10 || !result.probabilities.every(value => Number.isFinite(value) && value >= 0 && value <= 1) || !Number.isFinite(result.confidence)) throw new Error('Model 返回了无效结果，请重新启动服务。');
+        $('guess').textContent = result.prediction;
+        $('guess-label').textContent = 'Model 认为这是';
+        $('confidence').textContent = `${(result.confidence * 100).toFixed(1)}%`;
+        probabilityRows.forEach((row, digit) => {
+          const percentage = result.probabilities[digit] * 100;
+          row.classList.toggle('winner', digit === result.prediction);
+          row.querySelector('.prob-fill').style.width = `${percentage}%`;
+          row.querySelector('.prob-value').textContent = `${percentage.toFixed(1)}%`;
+          row.setAttribute('aria-label', `数字 ${digit}，probability ${percentage.toFixed(1)}%`);
+        });
+        if (typeof result.processed_image === 'string' && result.processed_image.startsWith('data:image/png;base64,')) {
+          $('processed').src = result.processed_image;
+          $('processed').hidden = false;
+          $('pixel-empty').hidden = true;
+        }
+        message(`Prediction 是 ${result.prediction}。和你写的一样吗？`);
+      } catch (error) {
+        resetResult();
+        message(error.name === 'TimeoutError' ? '识别超时，请稍后再试。' : error instanceof TypeError ? '连接中断，请确认本地 Python 服务正在运行。' : error.message, true);
+      } finally {state.busy = false;updateControls();}
+    });
+
+    async function refreshStatus() {
+      try {
+        const response = await fetch('/api/status', {signal:AbortSignal.timeout(8000),cache:'no-store'});
+        if (!response.ok) throw new Error('status unavailable');
+        const result = await response.json();
+        const wasReady = state.ready;
+        state.ready = result.ready === true;
+        $('status').dataset.state = state.ready ? 'ready' : 'loading';
+        $('status-text').textContent = state.ready ? 'Model 已就绪' : 'Model 未载入';
+        if (typeof result.launch_command === 'string' && result.launch_command.trim()) state.launchCommand = result.launch_command;
+        const architecture = result.model_architecture;
+        const modelName = result.model_name || (architecture === 'Linear' ? 'Linear classifier' : architecture === 'DigitCNN' ? 'CNN' : 'Model');
+        $('model-identity').replaceChildren(document.createTextNode(`${state.ready ? '已载入' : '等待载入'} ${modelName}`));
+        if (typeof result.model_file === 'string' && result.model_file) {
+          const filename = document.createElement('code');
+          filename.textContent = result.model_file;
+          $('model-identity').append(document.createTextNode(' · '), filename);
+        }
+        $('model-summary').textContent = `${modelName} · MNIST${Number.isInteger(result.parameter_count) ? ` · ${result.parameter_count.toLocaleString()} parameters` : ''}`;
+        if (architecture === 'Linear') {
+          $('learn-input-title').textContent = 'Preprocessing → Flatten';
+          $('learn-input').textContent = '先得到 28 × 28 的 grayscale 图片，Flatten 再把它展开成 784 个 pixel values。';
+          $('learn-model-title').textContent = 'Linear → 10 scores';
+          $('learn-model').textContent = '你训练的 Linear layer 用保存的 weights 和 bias，把 784 个输入变成 0～9 对应的 10 个 logits。';
+        } else if (architecture === 'DigitCNN') {
+          $('learn-input-title').textContent = 'Preprocessing → Tensor';
+          $('learn-input').textContent = '裁剪笔迹、缩放并居中到 28 × 28，再进行 normalization，得到 CNN 使用的 tensor。';
+          $('learn-model-title').textContent = 'CNN → 10 scores';
+          $('learn-model').textContent = 'Convolution layers 找出笔画和形状，Linear layers 再把这些 features 变成 0～9 对应的 10 个 logits。';
+        } else {
+          $('learn-input-title').textContent = 'Preprocessing';
+          $('learn-input').textContent = '裁剪笔迹、缩放并居中到 28 × 28，把图片转成 model 能计算的 tensor。';
+          $('learn-model-title').textContent = 'Model → scores';
+          $('learn-model').textContent = '载入你保存的 weights，让 model 给 0～9 分别打分。';
+        }
+        const devices = {mps:'Apple GPU · MPS',cpu:'CPU',cuda:'NVIDIA GPU · CUDA'};
+        $('device').textContent = result.device ? `Inference ${devices[result.device] || result.device}` : 'PyTorch · 本地运行';
+        $('training-stat').textContent = 'Test accuracy 未载入';
+        if (result.metrics && Number.isFinite(result.metrics.test_accuracy)) {
+          $('training-stat').replaceChildren();
+          const label = document.createTextNode('Test accuracy ');
+          const score = document.createElement('strong');
+          score.textContent = `${(result.metrics.test_accuracy * 100).toFixed(2)}%`;
+          $('training-stat').append(label, score);
+          if (Number.isInteger(result.metrics.epochs)) $('training-stat').append(document.createTextNode(` · ${result.metrics.epochs} epochs`));
+          if (result.metrics.device) $('training-stat').append(document.createTextNode(` · ${devices[result.metrics.device] || result.metrics.device}`));
+        }
+        if (!state.ready && !state.busy) message(typeof result.missing_message === 'string' && result.missing_message ? result.missing_message : `请确认 weights 文件已保存，再运行 ${state.launchCommand}。`);
+        else if (!wasReady && state.ready && !state.busy) message(state.hasInk ? 'Model 已就绪，点击「识别数字」。' : 'Model 已就绪，写下你的第一个数字吧。');
+      } catch (error) {
+        state.ready = false;
+        $('status').dataset.state = 'error';
+        $('status-text').textContent = '服务未连接';
+        if (!state.busy) message(`请在项目目录运行 ${state.launchCommand}，再刷新页面。`, true);
+      } finally {updateControls();}
+    }
+    clearCanvas();
+    refreshStatus();
+    setInterval(refreshStatus, 15000);
+  </script>
+</body>
+</html>

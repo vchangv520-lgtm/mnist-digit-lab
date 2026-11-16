@@ -1,0 +1,21 @@
+{
+  "test_count": 10000,
+  "matching_predictions": 10000,
+  "prediction_agreement": 1.0,
+  "pytorch_correct": 9858,
+  "onnx_correct": 9858,
+  "pytorch_accuracy": 0.9858,
+  "onnx_accuracy": 0.9858,
+  "max_absolute_logit_error": 1.1444091796875e-05,
+  "comparison_atol": 0.0001,
+  "comparison_rtol": 0.0001,
+  "method": "Same normalized official MNIST test tensors; PyTorch CPU vs ONNX Runtime CPU. This validates export equivalence, not browser handwriting preprocessing.",
+  "torch_version": "2.15.0",
+  "onnx_version": "1.23.2",
+  "onnxruntime_version": "1.32.0",
+  "checkpoint_sha256": "6b668995064b93281563d2babd18eceb7f99a4feec9e543224d095dbcd5cc6d1",
+  "onnx_sha256": "79e3b24a4c489265690f0a09b523507de88c8fb8e2ed28648e7ed16c50122383",
+  "onnx_bytes": 843090,
+  "onnx_opset": 18,
+  "browser_runtime_version": "1.31.1"
+}
